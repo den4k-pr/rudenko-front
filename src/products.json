@@ -1,0 +1,92 @@
+[
+    {
+        "id": 0,
+        "img": "Painting-1.png",
+        "name": "Innocence",
+        "fio": "Ria Arante",
+        "data": "Oil on canvas, 2020",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 1,
+        "img": "Painting-2.png",
+        "name": "Wallowing Breeze",
+        "fio": "Hettie Richards",
+        "data": "Hettie Richards",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 2,
+        "img": "Painting-1.png",
+        "name": "J Resistance",
+        "fio": "Ria Arante",
+        "data": "Gouache on paper, 2018",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 3,
+        "img": "Painting-3.png",
+        "name": "Warm Basket",
+        "fio": "Flora Powers",
+        "data": "Acrylic on wood, 2014",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 4,
+        "img": "Painting-4.png",
+        "name": "The Vonnegut ",
+        "fio": "Ria Arante",
+        "data": "Oil on canvas, 2018",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 5,
+        "img": "Painting-1.png",
+        "name": "Innocence",
+        "fio": "Ria Arante",
+        "data": "Oil on canvas, 2020",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 6,
+        "img": "Painting-2.png",
+        "name": "Wallowing Breeze",
+        "fio": "Hettie Richards",
+        "data": "Hettie Richards",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 7,
+        "img": "Painting-1.png",
+        "name": "J Resistance",
+        "fio": "Ria Arante",
+        "data": "Gouache on paper, 2018",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 8,
+        "img": "Painting-3.png",
+        "name": "Warm Basket",
+        "fio": "Flora Powers",
+        "data": "Acrylic on wood, 2014",
+        "size": "26 in × 23 in",
+        "price": 620
+    },
+    {
+        "id": 9,
+        "img": "Painting-4.png",
+        "name": "The Vonnegut ",
+        "fio": "Ria Arante",
+        "data": "Oil on canvas, 2018",
+        "size": "26 in × 23 in",
+        "price": 620
+    }
+]

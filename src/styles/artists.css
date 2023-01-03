@@ -1,0 +1,165 @@
+.artists{
+    padding-top: 120px;
+}
+.form-body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999999;
+}
+.form-fon{
+    background-color: #72727282;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.artist-form{
+    cursor: auto;
+    max-width: 758px;
+    width: 100%;
+    margin: 0 15px;
+    height: 478px;
+    background: #DADADA;
+    z-index: 9999999;
+    position: relative;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.artist-form textarea{
+    max-width: 430px;
+    width: 100%;
+    height: 127px;
+    margin-top: auto;
+    background: #FFFFFF;
+    padding: 15px 5px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: lowercase;
+    color: #000000;
+    margin-bottom: 70px;
+}
+.artist-form input{
+    max-width: 430px;
+    width: 100%;
+    margin-top: auto;
+    padding: 5px;
+}
+.artist-form button{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    background: #000000;
+    padding: 9px;
+    max-width: 176px;
+    width: 100%;
+    margin: 0 auto;
+    transition: .1s;
+}
+.artist-form button:hover{
+    background: #272727;
+}
+.artist-form select{
+    max-width: 130px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #505050;
+    padding: 7px;
+}
+.artist-image img{
+    min-width: 200px;
+    max-width: 200px;
+    margin-right: 50px;
+}
+.artists-title{
+    padding-bottom: 88px;
+    padding-top: 118px;
+    font-size: 52px;
+    line-height: 56px;
+    color: #161412;
+}
+.artist-form-box{
+    display: flex;
+    justify-content: space-between;
+    max-width: 430px;
+    width: 100%;
+}
+.artist-image{
+    display: flex;
+    flex-direction: column;
+}
+.we__works{
+    background: #161412;
+    border-radius: 2px;
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 100%;
+    transition: .1s;
+    text-align: center;
+}
+.we__works:hover{
+    background: #272727;
+}
+.we__works2{
+    background: #b7b7b7;
+    border-radius: 2px;
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    width: 100%;
+}
+.artist-button-box{
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+}
+.artist{
+    display: flex;
+    padding-bottom: 100px;
+}
+.artist-info-name{
+    padding-bottom: 28px;
+    font-size: 22px;
+    padding-top: 50px;
+    color: #161412;
+}
+.artist-info-city{
+    padding-bottom: 28px;
+}
+
+@media(max-width: 480px){
+    .artist-form{
+        padding: 30px;
+    }
+    .artist-form button {
+        font-size: 16px;
+        padding: 5px;
+        max-width: 136px;
+    }
+    .artists{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .artist {
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin: 0 auto;
+    }
+}

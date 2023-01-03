@@ -1,0 +1,235 @@
+.header-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    padding: 50px 15px 40px 15px;
+    background-color: #fff;
+    z-index: 999999;
+}
+.header__fon{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    transition: .3s;
+    background-color: #16141229;
+}
+.hed-hide{
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    top: -100%;
+    right: 50%;
+}
+.header-body-box{
+    display: flex;
+    align-items: center;
+}
+#header-body-box-list{
+    display: flex;
+    justify-content: space-between;
+    width: 265px;
+    margin-right: 33px;
+}
+.header-body-box-list_link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.875px;
+    text-transform: uppercase;
+    color: #161412;
+}
+.crear__buscet{
+    color: #7b7b7b;
+    font-size: 18px;
+    cursor: pointer;
+}
+.bascet-content{
+    margin-top: 30px;
+    height: 400px;
+    padding-right: 30px;
+    overflow-y: scroll;
+}
+.buscet-button{
+    background: #161412;
+    border-radius: 2px;
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    max-width: 92px;
+    width: 100%;
+    text-align: center;
+}
+.all__price{
+    font-size: 20px;
+    font-weight: 700;
+}
+.bascet-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+.bascet-content-product{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c3c3c3;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+.bascet-content-product-body-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px 0 0px;
+}
+.bascet-content-product-del{
+    background-image: url(../images/clear.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 25px;
+    height: 35px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.bascet-content-product-body-img{
+    max-width: 130px;
+}
+.bascet-content-product-body-name{
+    font-size: 16px;    
+}
+.bascet-content-product-body-price{
+    font-size: 18px;
+    font-weight: 700;
+}
+.bascet{
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    padding: 20px 0px 20px 50px;
+    box-shadow: -14px 14px 34px -27px #272727;
+    height: 100vh;
+    width: 350px;
+    transition: .3s ease;
+}
+.search{
+    width: 16px;
+    height: 17px;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+}
+.busket{
+    width: 20px;
+    height: 17px;
+    margin-left: 16px;
+    margin-right: 15px;
+    background-image: url(../images/busket.png);
+    background-repeat: no-repeat;
+}
+.header-body_logo{
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: lowercase;
+    color: #161412;
+    cursor: pointer;
+}
+.burger-list-show{
+    display: none;
+}
+.length{
+    margin-left: 14px;
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 20px;
+    color: #a20000;
+}
+@media(max-width: 800px){
+    .burger-list-hide{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #F4F4F2;
+        width: 100%;
+        padding: 100px 0;
+        display: flex;
+        justify-content: center;
+        z-index: 99999;
+        transition: .3s;
+        transform: translateY(-285px);
+    }
+    .burger-list-show{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #F4F4F2;
+        width: 100%;
+        padding: 100px 0;
+        display: flex;
+        justify-content: center;
+        z-index: 99999;
+        transition: .3s;
+        transform: translateY(0px);
+    }
+    #burger{
+        cursor: pointer;
+        z-index: 999999;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 50px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        right: 15px;
+    }
+    .busket{
+        margin-right: 70px;
+    }
+    .burger-line-1{
+        width: 25px;
+        height: 2px;
+        background-color: #161412;
+        transition: .3s;
+    }
+    .burger-line-2{
+        width: 25px;
+        height: 2px;
+        background-color: #161412;
+        margin: 6px 0;
+        transition: .3s;
+    }
+    .burger-line-3{
+        width: 25px;
+        height: 2px;
+        background-color: #161412;
+        transition: .3s;
+    }
+    .active .burger-line-1{
+        transform: rotate(-45deg);
+        margin-bottom: -16px;
+    }
+    .active .burger-line-2{
+        opacity: 0;
+    }
+    .active .burger-line-3{
+        transform: rotate(45deg);
+        
+    }
+}
