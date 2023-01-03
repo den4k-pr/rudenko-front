@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Header from "../header";
 // import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -60,6 +60,7 @@ const BusketForm = () => {
                     {loading ? 'sending...' : 'make order'}
                     </button>
                 </form>
+                <ToastContainer />
                 <Link to="/" className="form-fon"></Link>
             </div>
         </>

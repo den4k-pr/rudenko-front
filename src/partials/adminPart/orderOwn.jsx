@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPainters } from "../../store/painters/paintersSlice";
 import { getCategories } from "../../store/categories/categoriesSlice";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -78,6 +78,7 @@ const OrderOwn = () => {
                     {loading ? 'sending...' : 'make order'}
                     </button>
                 </form>
+                <ToastContainer />
                 <Link to="/artists" className="form-fon"></Link>
             </div>
         </>
