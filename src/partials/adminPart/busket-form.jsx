@@ -27,7 +27,7 @@ const BusketForm = () => {
         }
         try {
             setLoading(true);
-            const { dataBusket } = await axios.post(`/api/busket`, {
+            const { dataBusket } = await axios.post(`https://rudenko-back.up.railway.app/api/busket`, {
                 email,
                 phone,
                 message,
