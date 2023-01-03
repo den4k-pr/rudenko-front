@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { Link } from "react-router-dom";
 
-const Form = ({title}) => {
+const Form = ({title, handleClick}) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
@@ -17,9 +17,7 @@ const Form = ({title}) => {
             <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className="login-content-input" autocomplete="email" />
             <p className="login-content-text">Password</p>
             <input onChange={(e) => setPass(e.target.value)} value={pass} type="password" className="login-content-input" autocomplete="password" />
-            <button
-            //  onClick={() => handleClick(email, pass)}
-             className="login-content-button">{title}</button>
+            <button onClick={() => handleClick(email, pass)} className="login-content-button">{title}</button>
         </>
     )
 }
