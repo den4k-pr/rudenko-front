@@ -5,7 +5,7 @@ import Main from './partials/main';
 import Login from './pages/login';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import { Routes, Route } from "react-router-dom";
+import { Routes, HashRouter } from "react-router-dom";
 import AdminOwnProduct from "./partials/adminPart/adminOwnProduct";
 import CreateProduct from './partials/adminPart/createProduct';
 import AdminPainters from './partials/adminPart/adminPainters';
@@ -26,19 +26,19 @@ function App() {
     <>
       <Provider store={store}>
         <Routes>
-          <Route path="/" element={<Main />}/>
-          <Route path="/product/:id" element={<Product />}/>
-          <Route path="/admin" element={<Login />}/>
-          <Route path="/admin/painters" element={<AdminPainters />}/>
-          <Route path="/admin/AdminOwnProduct/:id" element={<AdminOwnProduct/>}/>
-          <Route path="/admin/CreateProduct" element={<CreateProduct/>}/>
-          <Route path="/admin/CreatePainters" element={<CreatePainters/>}/>
-          <Route path="/product/room/:id" element={<Room/>}/>
-          <Route path="/artists" element={<Artists/>}/>
-          <Route path="/paintings" element={<Paintings/>}/>
-          <Route path="/CreateCategory" element={<CreateCategory/>}/>
-          <Route path="/artists/modal" element={<OrderOwn/>}/>
-          <Route path="/modal" element={<BusketForm/>}/>
+          <HashRouter path="/" element={<Main />}/>
+          <HashRouter path="/product/:id" element={<Product />}/>
+          <HashRouter path="/admin" element={<Login />}/>
+          <HashRouter path="/admin/painters" element={<AdminPainters />}/>
+          <HashRouter path="/admin/AdminOwnProduct/:id" element={<AdminOwnProduct/>}/>
+          <HashRouter path="/admin/CreateProduct" element={<CreateProduct/>}/>
+          <HashRouter path="/admin/CreatePainters" element={<CreatePainters/>}/>
+          <HashRouter path="/product/room/:id" element={<Room/>}/>
+          <HashRouter path="/artists" element={<Artists/>}/>
+          <HashRouter path="/paintings" element={<Paintings/>}/>
+          <HashRouter path="/CreateCategory" element={<CreateCategory/>}/>
+          <HashRouter path="/artists/modal" element={<OrderOwn/>}/>
+          <HashRouter path="/modal" element={<BusketForm/>}/>
         </Routes>
       </Provider>
     </>
