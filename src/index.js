@@ -7,11 +7,11 @@ import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
-    <Provider store={ store }>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </HashRouter>
+  <Provider store={ store }>
+    <BrowserRouter>
+       <HashRouter>
+         <App />
+       </HashRouter>
+    </BrowserRouter>
+  </Provider>
 );
