@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getPainters = async () => {
-    const painters = await axios.get('/api/painters');
+    const painters = await axios.get('https://rudenko-back.up.railway.app/api/painters');
 
     return painters.data;
 }
