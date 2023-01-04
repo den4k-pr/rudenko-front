@@ -32,11 +32,6 @@
       "react-app/jest"
     ]
   },
-  devServer: {
-   historyApiFallback: true,
-   contentBase: './',
-   hot: true
-},
   "browserslist": {
     "production": [
       ">0.2%",
