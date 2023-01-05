@@ -46,7 +46,6 @@ const CreatePainters = () => {
                             onChange={(e) => setDescription(e.target.value)}
                             className = "ownModal-content-input"
                         />
-                        <p className="admin-main-content-line-text">Image</p>
                         <button onClick={handleCreatePainter} className="ownChange">Create</button>
                         <Link to="/admin" className="ownBack">Back</Link>
                     </form>
