@@ -88,7 +88,7 @@ const ProductPart = ({ID, planeImage, title, name, category, materials, descript
         
        ) : (
         plane && (
-            <Room roomSize={plane.size} roomImg={plane.planeImage} getBack={() => setRoom(true)} />
+            <Room roomSize={plane.size} roomImg={plane.image} getBack={() => setRoom(true)} />
         )
        )
 }
