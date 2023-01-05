@@ -10,7 +10,7 @@ const CreatePainters = () => {
     const [ name, setName ] = useState("")
     const [ city, setCity ] = useState("")
     const [ description, setDescription ] = useState("")
-    const [ planeImage, setPainterImage ] = useState(null)
+    const [ planeImage, setPainterImage ] = useState("")
 
     const handleCreatePainter = useCallback(() => {
         const formData = new FormData();
@@ -51,9 +51,9 @@ const CreatePainters = () => {
                         <p className="admin-main-content-line-text">Image</p>
                         <CreateInputs
                             name="planeImage"
-                            type="file"
+                            type="text"
                             error={errors && errors.planeImage && errors.planeImage.message}
-                            onChange={(e) => setPainterImage(e.target.files[0])}
+                            onChange={(e) => setPainterImage(e.target.value)}
                             />
                         <button onClick={handleCreatePainter} className="ownChange">Create</button>
                         <Link to="/admin" className="ownBack">Back</Link>
