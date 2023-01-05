@@ -24,7 +24,7 @@ const Artists = () => {
                         painters && painters.map(obj => (
                             <div key={obj._id} className="artist">
                                 <div className="artist-image">
-                                    <img src={obj.planeImage} alt="" />
+                                    <img src={obj.image} alt="" />
                                     <div className="artist-button-box">
                                         <Link to="/artists/modal" key={obj._id} className="we__works">to order</Link>
                                         <button className="we__works2">all works</button>
