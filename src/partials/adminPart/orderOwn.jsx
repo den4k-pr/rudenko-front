@@ -31,7 +31,7 @@ const OrderOwn = () => {
         }
         try {
             setLoading(true);
-            const { data } = await axios.post(`https://rudenko-back.up.railway.app/api/email`, {
+            const { data } = await axios.post(`https://mern-task-app-sc80.onrender.com/api/email`, {
               email,
               properties,
               paintersOption,
