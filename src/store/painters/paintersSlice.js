@@ -21,10 +21,6 @@ const paintersSlice = createSlice({
         builder.addCase(getPainters.pending, (state) => {
             state.isLoading = true;
         });
-        builder.addCase(getPainters.fulfilled, (state, action) => {
-            state.isLoading = false;
-            state.painters = action.payload
-        });
         builder.addCase(getPainters.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
