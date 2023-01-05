@@ -10,7 +10,7 @@ const CreatePainters = () => {
     const [ name, setName ] = useState("")
     const [ city, setCity ] = useState("")
     const [ description, setDescription ] = useState("")
-    const [ planeImage, setPainterImage ] = useState(null)
+    const [ planeImage, setPainterImage ] = useState("https://ams03pap002files.storage.live.com/y4mbq0ARsV4rj-CrRxsrgcc8Df_c3mO4JMYhH3LaHI0i5pLy41H0wI5sPW4RHb-MmrkA5Fx0HiCFxwaxpWr1OJbxEi8LyC2wc_ipm_Yqur75QXKLkbqTUh_kaPxWXS5KWImIFHxtD8r001Rx7a162gvXl-E-aRdn3UL7bmZzBgvmxR9Zk5vFZ8v9HcsI-Qhg8Dh?width=80&height=80&cropmode=none")
 
     const handleCreatePainter = useCallback(() => {
         const formData = new FormData();
