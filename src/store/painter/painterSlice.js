@@ -36,6 +36,10 @@ const painterSlice = createSlice({
             .addCase(getPainter.pending, (state) => {
                 state.isLoading = true;
             })
+            .addCase(getPainter.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.plane = action.payload[0];
+            })
             .addCase(getPainter.rejected, (state, action) => {
                 state.isError = true;
                 state.isLoading = false;
@@ -44,6 +48,10 @@ const painterSlice = createSlice({
             })
             .addCase(createPainter.pending, (state) => {
                 state.isLoading = true;
+                state.errors = null;
+            })
+            .addCase(createPainter.fulfilled, (state, action) => {
+                state.isLoading = false;
                 state.errors = null;
             })
             .addCase(createPainter.rejected, (state, action) => {
