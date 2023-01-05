@@ -17,7 +17,7 @@ const CreateProduct = () => {
     const [ size, setSize ] = useState("")
     const [ description, setDescription ] = useState("")
     const [ price, setPrice ] = useState("")
-    const [ planeImage, setPlaneImage ] = useState(null)
+    const [ image, setImage ] = useState("")
 
     const handleCreatePlane = useCallback(() => {
         const formData = new FormData();
@@ -28,14 +28,14 @@ const CreateProduct = () => {
         formData.append("size", size);
         formData.append("description", description);
         formData.append("price", price);
-        formData.append("planeImage", planeImage);
+        formData.append("image", image);
 
         dispatch(createPlane(formData)).then((res) => {
             if (!res.error) {
               navigate(`product/${res.payload._id}`, { replace: true });
             }
           });
-    }, [title, name, category, materials, dispatch, navigate, size, description, price, planeImage])
+    }, [title, name, category, materials, dispatch, navigate, size, description, price, image])
 
     useEffect(() => () => dispatch(resetPlaneErrors()),[dispatch])
 
@@ -105,11 +105,12 @@ const CreateProduct = () => {
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image</p>
-                        <CreateInputs
-                            name="planeImage"
-                            type="file"
-                            onChange={(e) => setPlaneImage(e.target.files[0])}
-                            />
+                        <input
+                            type = "text"
+                            name = "image"
+                            onChange={(e) => setImage(e.target.value)}
+                            className = "ownModal-content-input"
+                        />
                         <button onClick={handleCreatePlane} className="ownChange">Create</button>
                         <Link to="/admin" className="ownBack">Back</Link>
                     </form>
