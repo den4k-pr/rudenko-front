@@ -10,15 +10,17 @@ const CreatePainters = () => {
     const [ name, setName ] = useState("")
     const [ city, setCity ] = useState("")
     const [ description, setDescription ] = useState("")
+    const [ image, setImage ] = useState("")
 
     const handleCreatePainter = useCallback(() => {
         const formData = new FormData();
         formData.append("name", name);
         formData.append("city", city);
         formData.append("description", description);
+        formData.append("image", image);
 
         dispatch(createPainter(formData));
-    }, [name, city, description])
+    }, [name, city, description, image])
 
     useEffect(() => () => dispatch(resetPainterErrors()),[dispatch])
 
@@ -45,6 +47,11 @@ const CreatePainters = () => {
                             name = "description"
                             onChange={(e) => setDescription(e.target.value)}
                             className = "ownModal-content-input"
+                        />
+                        <CreateInputs
+                            name="image"
+                            error={ errors && errors.name && errors.name.message }
+                            onChange={(e) => setImage(e.target.value)}
                         />
                         <button onClick={handleCreatePainter} className="ownChange">Create</button>
                         <Link to="/admin" className="ownBack">Back</Link>
