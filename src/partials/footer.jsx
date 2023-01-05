@@ -20,7 +20,7 @@ function Footer() {
                     {
                         painters && painters.map(painter => (
                             <Link to="/artists" className="footer-painter">
-                                <img className="footer-painter-img" src={painter.planeImage} alt="" />
+                                <img className="footer-painter-img" src={painter.image} alt="" />
                                 <div className="footer-painter-info">
                                     <h3 className="footer-painter-info_name">{painter.name}</h3>
                                     <p className="footer-painter-info-profesional">Painter, {painter.city}</p>
