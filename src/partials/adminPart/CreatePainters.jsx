@@ -52,7 +52,6 @@ const CreatePainters = () => {
                         <CreateInputs
                             name="planeImage"
                             type="text"
-                            error={errors && errors.planeImage && errors.planeImage.message}
                             onChange={(e) => setPainterImage(e.target.value)}
                             />
                         <button onClick={handleCreatePainter} className="ownChange">Create</button>
