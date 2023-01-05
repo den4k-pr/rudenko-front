@@ -39,7 +39,7 @@ const Paintings = () => {
                     {
                     planes && planes.map(obj => (
                         <Link to={"/product/" + obj._id} key={obj._id} className={ choseType === obj.category || choseBoolean === true ? "main-slider-slide" : "hide"}>
-                            <img className="main-slider-slide_img" src={obj.planeImage} alt="" />
+                            <img className="main-slider-slide_img" src={obj.image} alt="" />
                             <div className="main-slider-textLeft">
                             <h3 className="main-slider-slide_name">{obj.title}</h3>
                             <p className="main-slider-slide_fio">{obj.name}</p>
