@@ -11,8 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const OrderOwn = () => {
     const [email, setemail] = useState("");
     const [properties, setProperties] = useState("");
-    const [paintersOption, setPaintersOption] = useState("");
-    const [CategoriesOption, setCategoriesOption] = useState("");
+//     const [paintersOption, setPaintersOption] = useState("");
+//     const [CategoriesOption, setCategoriesOption] = useState("");
     const [loading, setLoading] = useState(false);
 
     const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const OrderOwn = () => {
     
     const submitHandler = async (e) => {
         e.preventDefault();
-        if (!email || !properties || !paintersOption || !CategoriesOption) {
+        if (!email || !properties) {
             return toast.error('Please fill email, subject and message');
         }
         try {
@@ -53,24 +53,22 @@ const OrderOwn = () => {
         <>
             <Header />
             <div className="form-body">
-                <form
-                 onSubmit={submitHandler} 
-                 className="artist-form">
+                <form onSubmit={submitHandler} className="artist-form">
                     <div className="artist-form-box">
-                    <select onChange={(e) => setCategoriesOption(e.target.value)}>
-                        {
-                            categories && categories.map(category => (
-                                <option value={(e) => setCategoriesOption(e.target.value)} onChange={(e) => setCategoriesOption(e.target.value)}>{category.tab}</option>
-                            ))
-                        }
-                    </select>
-                    <select onChange={(e) => setPaintersOption(e.target.value)}>
-                        {
-                            painters && painters.map(painter => (
-                                <option value={(e) => setPaintersOption(e.target.value)} onChange={(e) => setPaintersOption(e.target.value)}>{painter.name}</option>
-                            ))
-                        }
-                    </select>
+//                     <select onChange={(e) => setCategoriesOption(e.target.value)}>
+//                         {
+//                             categories && categories.map(category => (
+//                                 <option value={(e) => setCategoriesOption(e.target.value)} onChange={(e) => setCategoriesOption(e.target.value)}>{category.tab}</option>
+//                             ))
+//                         }
+//                     </select>
+//                     <select onChange={(e) => setPaintersOption(e.target.value)}>
+//                         {
+//                             painters && painters.map(painter => (
+//                                 <option value={(e) => setPaintersOption(e.target.value)} onChange={(e) => setPaintersOption(e.target.value)}>{painter.name}</option>
+//                             ))
+//                         }
+//                     </select>
                     </div>
                     <input type="email" onChange={(e) => setemail(e.target.value)} placeholder="Write your email"/>
                     <textarea onChange={(e) => setProperties(e.target.value)} placeholder="Write  your properties"></textarea>
