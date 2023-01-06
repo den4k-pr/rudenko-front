@@ -23,7 +23,7 @@ const OrderOwn = () => {
         e.preventDefault();
 
         emailjs.sendForm('service_uw0951x',
-        'template_j9atfyn', from.current,
+        'template_j9atfyn', form.current,
         'B3uHEg9VYxDRxtTJq')
             .the((result) => {
                 console.log(result.text);
@@ -47,7 +47,6 @@ const OrderOwn = () => {
                     <textarea name="user_message" type="text" placeholder="Write  your properties"></textarea>
                     <button type="submit">make order</button>
                 </form>
-                <ToastContainer />
                 <Link to="/artists" className="form-fon"></Link>
             </div>
         </>
