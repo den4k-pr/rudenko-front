@@ -21,7 +21,14 @@ const OrderOwn = () => {
         event.preventDefault();
         console.log("values email",userEmail);
         console.log("values message",message);
-        sendMail({userEmail,message})
+        sendMail({userEmail,message}).then(data=>{
+            if(data.err){
+                console.log("err ",data.err)
+            }else{
+                console.log("Success",data);
+                setValues({...values,status:true})
+            }
+        }).catch(console.log("error in send mail"))
     }
 
     // const dispatch = useDispatch();
