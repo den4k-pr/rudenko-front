@@ -43,6 +43,7 @@ const OrderOwn = () => {
                  className="artist-form">
                      <div className="artist-form-box">
                     <select name="user_category">
+                        <option className="hide-option">Choose a category</option>
                         {
                             categories && categories.map(category => (
                                 <option>{category.tab}</option>
@@ -50,6 +51,7 @@ const OrderOwn = () => {
                         }
                     </select>
                     <select name="user_painter">
+                        <option className="hide-option">Choose an artist</option>
                         {
                             painters && painters.map(painter => (
                                 <option>{painter.name}</option>
@@ -57,7 +59,7 @@ const OrderOwn = () => {
                         }
                     </select>
                     </div>
-                    <div name="jjj">jjj</div>
+                    <input name="jjj" value="dsvsvvvvvvvvvvvvvvvvv"/>
                     <input name="user_name" type="text" placeholder="Write your name" required/>
                     <input name="user_email" type="email" placeholder="Write your email" required/>
                     <input name="user_phone" type="phone" placeholder="Write your phone" required/>
