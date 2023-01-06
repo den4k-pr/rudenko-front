@@ -41,6 +41,22 @@ const OrderOwn = () => {
                  ref={form}
                  onSubmit={sendEmail} 
                  className="artist-form">
+                     <div className="artist-form-box">
+                    <select>
+                        {
+                            categories && categories.map(category => (
+                                <option name="user_category">{category.tab}</option>
+                            ))
+                        }
+                    </select>
+                    <select>
+                        {
+                            painters && painters.map(painter => (
+                                <option name="user_painter">{painter.name}</option>
+                            ))
+                        }
+                    </select>
+                    </div>
                     <input name="user_name" type="text" placeholder="Write your name" required/>
                     <input name="user_email" type="email" placeholder="Write your email" required/>
                     <input name="user_phone" type="phone" placeholder="Write your phone" required/>
