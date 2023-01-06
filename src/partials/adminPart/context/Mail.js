@@ -1,5 +1,5 @@
 export const sendMail = data => {
-    return fetch('https://mern-task-app-sc80.onrender.com/api/sendmail', {
+    return fetch('https://mern-task-app-sc80.onrender.com/artists/modal', {
         method: "POST",
         headers: {
             Accept: "application/json",
