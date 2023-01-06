@@ -29,7 +29,7 @@ const OrderOwn = () => {
         }
         try {
             setLoading(true);
-            const { data } = await axios.post(`/api/email`, {
+            const { data } = await axios.post(`https://rudenko-back.up.railway.app/api/email`, {
               email,
               properties,
             });
