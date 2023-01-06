@@ -46,12 +46,14 @@
     text-transform: lowercase;
     color: #000000;
     margin-bottom: 70px;
+    margin-top: 5px;
 }
 .artist-form input{
     max-width: 430px;
     width: 100%;
     margin-top: auto;
-    padding: 5px;
+    padding: 7px;
+    margin: 5px 0;
 }
 .artist-form button{
     font-weight: 400;
@@ -62,7 +64,7 @@
     padding: 9px;
     max-width: 176px;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     transition: .1s;
 }
 .artist-form button:hover{
