@@ -1,5 +1,5 @@
 export const sendMail = data => {
-    return fetch('http://localhost:8000/api/sendmail', {
+    return fetch('https://rudenko-back.up.railway.app/api/sendmail', {
         method: "POST",
         headers: {
             Accept: "application/json",
