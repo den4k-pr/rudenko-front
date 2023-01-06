@@ -29,7 +29,7 @@ const OrderOwn = () => {
         }
         try {
             setLoading(true);
-            const { data } = await axios.post(`/api/email`, {
+            const { data } = await axios.post(`sandbox966792d89f1c42af8ea4aca8c90c5006.mailgun.org/api/email`, {
               email,
               properties,
             });
