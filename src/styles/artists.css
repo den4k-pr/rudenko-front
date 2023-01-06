@@ -76,6 +76,7 @@
     line-height: 28px;
     color: #505050;
     padding: 7px;
+    margin-bottom: 5px;
 }
 .artist-image img{
     min-width: 200px;
