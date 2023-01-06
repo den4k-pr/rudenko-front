@@ -11,8 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const OrderOwn = () => {
     const [email, setemail] = useState("");
     const [properties, setProperties] = useState("");
-//     const [paintersOption, setPaintersOption] = useState("");
-//     const [CategoriesOption, setCategoriesOption] = useState("");
     const [loading, setLoading] = useState(false);
 
     const dispatch = useDispatch();
@@ -34,8 +32,6 @@ const OrderOwn = () => {
             const { data } = await axios.post(`https://rudenko-back.up.railway.app/api/email`, {
               email,
               properties,
-              paintersOption,
-              CategoriesOption,
             });
             setLoading(false);
             toast.success(data.properties);
@@ -54,7 +50,6 @@ const OrderOwn = () => {
             <Header />
             <div className="form-body">
                 <form onSubmit={submitHandler} className="artist-form">
-
                     <input type="email" onChange={(e) => setemail(e.target.value)} placeholder="Write your email"/>
                     <textarea onChange={(e) => setProperties(e.target.value)} placeholder="Write  your properties"></textarea>
                     <button>
