@@ -54,7 +54,7 @@ const OrderOwn = () => {
             <Header />
             <div className="form-body">
                 <form onSubmit={submitHandler} className="artist-form">
-                    <div className="artist-form-box">
+//                     <div className="artist-form-box">
 //                     <select onChange={(e) => setCategoriesOption(e.target.value)}>
 //                         {
 //                             categories && categories.map(category => (
@@ -69,7 +69,7 @@ const OrderOwn = () => {
 //                             ))
 //                         }
 //                     </select>
-                    </div>
+//                     </div>
                     <input type="email" onChange={(e) => setemail(e.target.value)} placeholder="Write your email"/>
                     <textarea onChange={(e) => setProperties(e.target.value)} placeholder="Write  your properties"></textarea>
                     <button>
