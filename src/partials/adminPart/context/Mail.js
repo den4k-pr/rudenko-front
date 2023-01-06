@@ -7,7 +7,6 @@ export const sendMail = data => {
         },
         body:JSON.stringify(data)
     }).then(response=>{
-        console.log("response", response);
         return response.json();
     }).catch(err=>console.log(err))
 }
