@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../header";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPainters } from "../../store/painters/paintersSlice";
 import { getCategories } from "../../store/categories/categoriesSlice";
-import { ToastContainer, toast } from 'react-toastify';
-import axios from 'axios';
-import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser'
 
 const OrderOwn = () => {
-    const [email, setemail] = useState("");
-    const [properties, setProperties] = useState("");
-    const [paintersOption, setPaintersOption] = useState("");
-    const [CategoriesOption, setCategoriesOption] = useState("");
-    const [loading, setLoading] = useState(false);
-
     const dispatch = useDispatch();
     const { painters } = useSelector((state) => state.painters);
     const { categories } = useSelector((state) => state.categories);
@@ -23,38 +15,31 @@ const OrderOwn = () => {
       dispatch(getPainters());
       dispatch(getCategories());
     }, [dispatch]);
+
     
-    const submitHandler = async (e) => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
         e.preventDefault();
-        if (!email || !properties || !paintersOption || !CategoriesOption) {
-            return toast.error('Please fill email, subject and message');
-        }
-        try {
-            setLoading(true);
-            const { data } = await axios.post(`/api/email`, {
-              email,
-              properties,
-              paintersOption,
-              CategoriesOption,
+
+        emailjs.sendForm('service_uw0951x',
+        'template_j9atfyn', from.current,
+        'B3uHEg9VYxDRxtTJq')
+            .the((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
             });
-            setLoading(false);
-            toast.success(data.properties);
-          } catch (err) {
-            setLoading(false);
-            toast.error(
-              err.response && err.response.data.properties
-                ? err.response.data.properties
-                : err.properties
-            );
-          }
-    }
+            e.target.reset()
+    };
 
     return(
         <>
             <Header />
             <div className="form-body">
                 <form
-                 onSubmit={submitHandler} 
+                 ref={form}
+                 onSubmit={sendEmail} 
                  className="artist-form">
                     <div className="artist-form-box">
                     <select onChange={(e) => setCategoriesOption(e.target.value)}>
@@ -64,19 +49,19 @@ const OrderOwn = () => {
                             ))
                         }
                     </select>
-                    <select onChange={(e) => setPaintersOption(e.target.value)}>
+                    <select>
                         {
                             painters && painters.map(painter => (
-                                <option value={(e) => setPaintersOption(e.target.value)} onChange={(e) => setPaintersOption(e.target.value)}>{painter.name}</option>
+                                <option name="painter">{painter.name}</option>
                             ))
                         }
                     </select>
                     </div>
-                    <input type="email" onChange={(e) => setemail(e.target.value)} placeholder="Write your email" required/>
-                    <textarea onChange={(e) => setProperties(e.target.value)} placeholder="Write  your properties"></textarea>
-                    <button>
-                    {loading ? 'sending...' : 'make order'}
-                    </button>
+                    <input name="user_name" type="text" placeholder="Write your name" required/>
+                    <input name="user_email" type="email" placeholder="Write your email" required/>
+                    <input name="user_phone" type="phone" placeholder="Write your phone" required/>
+                    <textarea name="user_message" type="text" placeholder="Write  your properties"></textarea>
+                    <button type="submit">make order</button>
                 </form>
                 <ToastContainer />
                 <Link to="/artists" className="form-fon"></Link>
