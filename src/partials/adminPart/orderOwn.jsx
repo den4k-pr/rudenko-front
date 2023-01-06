@@ -22,7 +22,7 @@ const OrderOwn = () => {
         console.log("values email",userEmail);
         console.log("values message",message);
         sendMail({userEmail,message}).then(data=>{
-            if(!data.err){
+            if(data.err){
                 console.log("err ",data.err)
             }else{
                 console.log("Success",data);
