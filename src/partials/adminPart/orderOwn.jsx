@@ -72,7 +72,7 @@ const OrderOwn = () => {
                         }
                     </select>
                     </div>
-                    <input type="email" onChange={(e) => setemail(e.target.value)} placeholder="Write your email"/>
+                    <input type="email" onChange={(e) => setemail(e.target.value)} placeholder="Write your email" required/>
                     <textarea onChange={(e) => setProperties(e.target.value)} placeholder="Write  your properties"></textarea>
                     <button>
                     {loading ? 'sending...' : 'make order'}
