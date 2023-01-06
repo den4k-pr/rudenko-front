@@ -1,53 +1,84 @@
-import React, { 
-    //useEffect,
-     useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../header";
 import { Link } from "react-router-dom";
-import { sendMail } from "./context/Mail";
-
+import { useDispatch, useSelector } from "react-redux";
+import { getPainters } from "../../store/painters/paintersSlice";
+import { getCategories } from "../../store/categories/categoriesSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
+import 'react-toastify/dist/ReactToastify.css';
 
 const OrderOwn = () => {
-    const [values, setValues] = useState({
-        userEmail: "",
-        message: "",
-        status: false
-    })
-    const {userEmail,message,status}=values;
-    const handleChange=name=>event=>{
-        setValues({...values,[name]:event.target.value})
-    }
+    const [email, setemail] = useState("");
+    const [properties, setProperties] = useState("");
+    const [paintersOption, setPaintersOption] = useState("");
+    const [CategoriesOption, setCategoriesOption] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit=event=>{
-        event.preventDefault();
-        console.log("values email",userEmail);
-        console.log("values message",message);
-        sendMail({userEmail,message})
-    }
-
-    // const dispatch = useDispatch();
-    // const { painters } = useSelector((state) => state.painters);
-    // const { categories } = useSelector((state) => state.categories);
+    const dispatch = useDispatch();
+    const { painters } = useSelector((state) => state.painters);
+    const { categories } = useSelector((state) => state.categories);
   
-    // useEffect(() => {
-    //   dispatch(getPainters());
-    //   dispatch(getCategories());
-    // }, [dispatch]);
+    useEffect(() => {
+      dispatch(getPainters());
+      dispatch(getCategories());
+    }, [dispatch]);
     
+    const submitHandler = async (e) => {
+        e.preventDefault();
+        if (!email || !properties || !paintersOption || !CategoriesOption) {
+            return toast.error('Please fill email, subject and message');
+        }
+        try {
+            setLoading(true);
+            const { data } = await axios.post(`/api/email`, {
+              email,
+              properties,
+              paintersOption,
+              CategoriesOption,
+            });
+            setLoading(false);
+            toast.success(data.properties);
+          } catch (err) {
+            setLoading(false);
+            toast.error(
+              err.response && err.response.data.properties
+                ? err.response.data.properties
+                : err.properties
+            );
+          }
+    }
 
     return(
         <>
             <Header />
             <div className="form-body">
                 <form
-                 onSubmit={handleSubmit} 
+                 onSubmit={submitHandler} 
                  className="artist-form">
-                    <input value={userEmail} onChange={handleChange("userEmail")} type="email" placeholder="Write your email"/>
-                    <textarea value={message} onChange={handleChange("message")} placeholder="Write  your properties"></textarea>
-                    <button type="submit">make order</button>
+                    <div className="artist-form-box">
+                    <select onChange={(e) => setCategoriesOption(e.target.value)}>
+                        {
+                            categories && categories.map(category => (
+                                <option value={(e) => setCategoriesOption(e.target.value)} onChange={(e) => setCategoriesOption(e.target.value)}>{category.tab}</option>
+                            ))
+                        }
+                    </select>
+                    <select onChange={(e) => setPaintersOption(e.target.value)}>
+                        {
+                            painters && painters.map(painter => (
+                                <option value={(e) => setPaintersOption(e.target.value)} onChange={(e) => setPaintersOption(e.target.value)}>{painter.name}</option>
+                            ))
+                        }
+                    </select>
+                    </div>
+                    <input type="email" onChange={(e) => setemail(e.target.value)} placeholder="Write your email"/>
+                    <textarea onChange={(e) => setProperties(e.target.value)} placeholder="Write  your properties"></textarea>
+                    <button>
+                    {loading ? 'sending...' : 'make order'}
+                    </button>
                 </form>
-                {
-                    status ? <div>message sent seccessfully</div> : <div>error</div>
-                }
+                <ToastContainer />
                 <Link to="/artists" className="form-fon"></Link>
             </div>
         </>
