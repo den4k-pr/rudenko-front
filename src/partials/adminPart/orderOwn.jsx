@@ -41,22 +41,6 @@ const OrderOwn = () => {
                  ref={form}
                  onSubmit={sendEmail} 
                  className="artist-form">
-//                     <div className="artist-form-box">
-//                     <select onChange={(e) => setCategoriesOption(e.target.value)}>
-//                         {
-//                             categories && categories.map(category => (
-//                                 <option value={(e) => setCategoriesOption(e.target.value)} onChange={(e) => setCategoriesOption(e.target.value)}>{category.tab}</option>
-//                             ))
-//                         }
-//                     </select>
-//                     <select>
-//                         {
-//                             painters && painters.map(painter => (
-//                                 <option name="painter">{painter.name}</option>
-//                             ))
-//                         }
-//                     </select>
-//                     </div>
                     <input name="user_name" type="text" placeholder="Write your name" required/>
                     <input name="user_email" type="email" placeholder="Write your email" required/>
                     <input name="user_phone" type="phone" placeholder="Write your phone" required/>
