@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from '../../store/categories/categoriesSlice';
-import { deleteCategory } from "../../store/services/categoriesService";
+import { deleteCategories } from "../../store/services/categoriesService";
 
 
 export default function AdminPaintersPainters(){
