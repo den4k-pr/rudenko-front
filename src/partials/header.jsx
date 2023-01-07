@@ -36,11 +36,6 @@ function Header() {
 
     return(
         <header>
-        {
-        products.map(title =>
-            <p>{title.title}</p>
-        )
-        }
             <div onClick={() => setBurger(false)} className={ burger === true ? "header__fon" : "header__fon hed-hide"}></div>
             <div onClick={() => setBascet(false)} className={ bascet === true ? "header__fon" : "header__fon hed-hide"}></div>
             <div className="wrapper">
@@ -75,6 +70,11 @@ function Header() {
                                     </li>
                                 </ul>
                             </div>
+{
+    products.map(title => (
+        <p>{title.title}</p>
+    ))
+}
                             <div className="search_body">
                                 <input type="text" onChange={(event) => setValue(event.target.value)}/>
                                 <div className="search"></div>
