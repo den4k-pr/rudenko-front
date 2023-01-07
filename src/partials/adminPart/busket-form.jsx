@@ -45,7 +45,7 @@ const BusketForm = () => {
                           </>
                        )
                     }
-                    <input type="hidden" value={totalPrice} name="totP"/>
+                    <input type="hidden" value={totalPrice + "$"} name="totP"/>
                     <select className="states" name="client_state" id="">
                         <option className="hide-option">Choose State</option>
                         <option>Alabama</option>
