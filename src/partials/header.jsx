@@ -73,7 +73,7 @@ function Header() {
                             <div className="search_body">
                                 <div className="search-list">
                                     {
-                                        filtered && filtered.map(title => (
+                                        filtered.map(title => (
                                             <p>{title.title}</p>
                                         ))
                                     }    
