@@ -37,7 +37,7 @@ function Header() {
     return(
         <header>
         {
-        products.map(title =
+        products.map(title =>
             <p>{title.title}</p>
         )
         }
