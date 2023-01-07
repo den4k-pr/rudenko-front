@@ -49,7 +49,7 @@ const Paintings = () => {
                                 <p className="main-slider-slide__bottom_price">&#36; {obj.price}</p>
                                 <div className="main-slider-slide__bottom-links">
                                     <div className="main-slider-slide__bottom-ikons-box1"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-searck.png" alt="" /></div>
-                                    <div onClick={onClickAdd} className="main-slider-slide__bottom-ikons-box2"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-busket.png" alt="" /></div>
+                                    <div className="main-slider-slide__bottom-ikons-box2"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-busket.png" alt="" /></div>
                                 </div>
                             </div>
                             </div>
