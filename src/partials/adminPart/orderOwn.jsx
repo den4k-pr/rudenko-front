@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Header from "../header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPainters } from "../../store/painters/paintersSlice";
 import { getCategories } from "../../store/categories/categoriesSlice";
@@ -10,6 +10,7 @@ const OrderOwn = () => {
     const dispatch = useDispatch();
     const { painters } = useSelector((state) => state.painters);
     const { categories } = useSelector((state) => state.categories);
+    const navigate = useNavigate();
   
     useEffect(() => {
       dispatch(getPainters());
@@ -24,9 +25,9 @@ const OrderOwn = () => {
         emailjs.sendForm('service_uw0951x',
         'template_j9atfyn', form.current,
         'B3uHEg9VYxDRxtTJq')
-            .the((result) => {
+            .then((result) => {
                 console.log(result.text);
-                window.location.href='https://mern-task-app-sc80.onrender.com/artists';
+                navigate('/artists')
             }, (error) => {
                 console.log(error.text);
             });
