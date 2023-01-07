@@ -1,6 +1,9 @@
 .artists{
     padding-top: 120px;
 }
+.hide-option{
+    display: none;
+}
 .form-body{
     position: fixed;
     width: 100%;
