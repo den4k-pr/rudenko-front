@@ -64,7 +64,7 @@ const OrderOwn = () => {
                     <input name="user_name" type="text" placeholder="Write your name" required/>
                     <input name="user_email" type="email" placeholder="Write your email" required/>
                     <input name="user_phone" type="phone" placeholder="Write your phone" required/>
-                    <textarea name="user_message" type="text" placeholder="Write  your properties"></textarea>
+                    <textarea name="user_message" type="text" placeholder="Write  your properties" required></textarea>
                     <button type="submit">make order</button>
                 </form>
                 <button className="form-fon"></button>
