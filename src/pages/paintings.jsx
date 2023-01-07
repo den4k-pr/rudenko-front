@@ -4,7 +4,6 @@ import Header from '../partials/header';
 import { useDispatch, useSelector } from "react-redux";
 import { getPlanes } from '../store/planes/planesSlice';
 import { getCategories } from '../store/categories/categoriesSlice';
-import { addItem } from '../store/cart/cartSlice';
 import Footer from '../partials/footer';
 
 const Paintings = () => {
@@ -19,17 +18,6 @@ const Paintings = () => {
         dispatch(getPlanes())
         dispatch(getCategories())
     }, [dispatch]);
-
-    const onClickAdd = () => {
-        const item = {
-            ID,
-            planeImage,
-            title,
-            name,
-            price
-        };
-        dispatch(addItem(item));
-    }
     return(
         <>
             <Header />
@@ -61,7 +49,7 @@ const Paintings = () => {
                                 <p className="main-slider-slide__bottom_price">&#36; {obj.price}</p>
                                 <div className="main-slider-slide__bottom-links">
                                     <div className="main-slider-slide__bottom-ikons-box1"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-searck.png" alt="" /></div>
-                                    <div onClick={onClickAdd} className="main-slider-slide__bottom-ikons-box2"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-busket.png" alt="" /></div>
+                                    <div className="main-slider-slide__bottom-ikons-box2"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-busket.png" alt="" /></div>
                                 </div>
                             </div>
                             </div>
