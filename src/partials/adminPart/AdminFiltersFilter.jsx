@@ -23,7 +23,7 @@ export default function AdminPaintersPainters(){
                     <div className="admin-main-content-product-box">
                         <p className="admin-main-content-line-text">{category.tab}</p>
                     </div>
-                    <button onClick={() => deleteCategory(category._id)} id="removeBtn" className="admin-main-content-product-del" >
+                    <button onClick={() => deleteCategories(category._id)} id="removeBtn" className="admin-main-content-product-del" >
                     </button>
                 </div>
             ))
