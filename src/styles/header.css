@@ -142,7 +142,7 @@
     cursor: pointer;
     position: relative;
 }
-.search:hover .search_body input{
+.search_body:hover input{
     opacity: 1;
     visibility: visible;
 }
