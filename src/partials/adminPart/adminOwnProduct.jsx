@@ -21,7 +21,7 @@ export default function AdminOwnProduct(){
                     </Link>
                     <div className="info-product-content">
                         <h3 className="info-product-content-title">{plane.title}</h3>
-                        <img src={plane.iamge} alt="" className="info-product-content-img" />
+                        <img src={plane.image} alt="" className="info-product-content-img" />
                         <div className="info-product-content-box">
                             <div className="info-product-content-text">Painter: {plane.name}</div>
                             <div className="info-product-content-text">Size: {plane.size}</div>
