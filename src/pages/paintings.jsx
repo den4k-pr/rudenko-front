@@ -42,7 +42,7 @@ const Paintings = () => {
                                 <p className="main-slider-slide__bottom_price">&#36; {obj.price}</p>
                                 <div className="main-slider-slide__bottom-links">
                                     <div className="main-slider-slide__bottom-ikons-box1"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-searck.png" alt="" /></div>
-                                    <div onClick={onClickAdd} className="main-slider-slide__bottom-ikons-box2"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-busket.png" alt="" /></div>
+                                    <div className="main-slider-slide__bottom-ikons-box2"><img className="main-slider-slide__bottom-ikons-ikon" src="./images/product-busket.png" alt="" /></div>
                                 </div>
                             </div>
                             </div>
@@ -51,11 +51,6 @@ const Paintings = () => {
                 }
                     </div>
                     <div className="testBlok">
-                    {
-                    planes && planes.map(obj => (
-                        <Pr ID={obj._id} title={obj.title} name={obj.name} materials={obj.materials} size={obj.size} price={obj.price}/>
-                    ))
-                }
                     </div>
                 </div>
             </main>
