@@ -148,7 +148,10 @@
     padding: 5px;
     border-radius: 15px;
     border: 1px solid #272727;
-    z-index: 9;
+}
+.search_body{
+    display: flex;
+    
 }
 .busket{
     width: 20px;
