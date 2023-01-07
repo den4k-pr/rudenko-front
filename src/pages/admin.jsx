@@ -29,7 +29,6 @@ export default function Admin(){
                     <div className="admin-sitebar">
                         <p className="admin-sitebar-link active">Pictures</p>
                         <Link to="/admin/painters" className="admin-sitebar-link">Painters</Link>
-                        <Link to="/admin/filter" className="admin-sitebar-link">Filter</Link>
                     </div>
                     <div className="admin-main">
                         <div className="admin-main-top">
