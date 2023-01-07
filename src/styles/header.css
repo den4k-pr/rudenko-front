@@ -44,7 +44,7 @@
 #header-body-box-list{
     display: flex;
     justify-content: space-between;
-    width: 265px;
+    width: 190px;
     margin-right: 33px;
 }
 .header-body-box-list_link{
