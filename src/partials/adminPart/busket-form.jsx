@@ -38,7 +38,9 @@ const BusketForm = () => {
                     {
                        items.map(item => 
                           <>
-                          <input name="client_fullName" value={item.name} type="text" placeholder="Write your Full name" required/>
+                            <input name="pr_title" value={" " + item.title + " "} type="hidden" placeholder="Write your Full name" required/>
+                            <input name="pr_name" value={" " + item.name + " "} type="hidden" placeholder="Write your Full name" required/>
+                            <input name="pr_price" value={" " + item.price + " "} type="hidden" placeholder="Write your Full name" required/>
                           </>
                        )
                     }
