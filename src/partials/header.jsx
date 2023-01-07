@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/header.css';
 import { useSelector, useDispatch } from 'react-redux';
 import CartItem from '../partials/cartItem';
 import { clearItems } from '../store/cart/cartSlice';
 import { Link } from 'react-router-dom';
+import { getPlanes } from '../store/planes/planesSlice';
 
 function Header() {
+    const [value, setValue] = useState("");
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
 
@@ -20,10 +22,25 @@ function Header() {
             dispatch(clearItems())
         }
     }
+    
+    const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
 
+  useEffect(() => {
+    dispatch(getPlanes())
+  }, [dispatch]);
+    
+    const filtered = products.filter(title => {
+        return title.name.toLowerCase().includes(value.toLowerCase())
+    })
 
     return(
         <header>
+        {
+        products.map(title = {
+            <p>{title.title}</p>
+        })
+        }
             <div onClick={() => setBurger(false)} className={ burger === true ? "header__fon" : "header__fon hed-hide"}></div>
             <div onClick={() => setBascet(false)} className={ bascet === true ? "header__fon" : "header__fon hed-hide"}></div>
             <div className="wrapper">
@@ -59,7 +76,7 @@ function Header() {
                                 </ul>
                             </div>
                             <div className="search_body">
-                                <input type="text"/>
+                                <input type="text" onChange={(event) => setValue(event.target.value)}/>
                                 <div className="search"></div>
                             </div>
                             <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
