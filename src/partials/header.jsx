@@ -37,9 +37,9 @@ function Header() {
     return(
         <header>
         {
-        products.map(title = {
+        products.map(title =
             <p>{title.title}</p>
-        })
+        )
         }
             <div onClick={() => setBurger(false)} className={ burger === true ? "header__fon" : "header__fon hed-hide"}></div>
             <div onClick={() => setBascet(false)} className={ bascet === true ? "header__fon" : "header__fon hed-hide"}></div>
