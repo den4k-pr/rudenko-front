@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { getPlanes } from '../store/planes/planesSlice';
 
 function Header() {
+    const [value, setValue] = useState('');
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
 
@@ -28,6 +29,10 @@ function Header() {
     dispatch(getPlanes())
   }, [dispatch]);
     
+   const filtered = planes.filter(plane => {
+        return country.name.toLowerCase().icludes(value.toLowerCase())
+    })
+   
    
     return(
         <header>
@@ -68,12 +73,12 @@ function Header() {
                             <div className="search_body">
                                 <div className="search-list">
                                     {
-                                        planes && planes.map(plane => (
+                                        filtered && filtered.map(plane => (
                                             <p>{plane.title}</p>
                                         ))
                                     }    
                                 </div>
-                                <input type="text"/>
+                                <input type="text" onChange={(event) => setValue(event.target.value)}/>
                                 <div className="search"></div>
                             </div>
                             <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
