@@ -28,7 +28,7 @@ const AdminFilter = () => {
                 <div className="admin-body">
                     <div className="admin-sitebar">
                         <Link to="/admin" className="admin-sitebar-link">Pictures</Link>
-                        <Link to="/admin/painters" className="admin-sitebar-link">Painters</p>
+                        <Link to="/admin/painters" className="admin-sitebar-link">Painters</Link>
                         <p className="admin-sitebar-link active">Filter</p>
                     </div>
                     <div className="admin-main">
