@@ -140,6 +140,12 @@
     background-image: url(../images/search.png);
     background-repeat: no-repeat;
     cursor: pointer;
+    position: relative;
+}
+.search input{
+    background: #000;
+    position: absolute;
+    left: -100px;
 }
 .busket{
     width: 20px;
