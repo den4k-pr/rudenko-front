@@ -16,7 +16,8 @@ const OrderOwn = () => {
       dispatch(getCategories());
     }, [dispatch]);
 
-    
+    const useNavigate = ReactRouterDOM.useNavigate;
+    const navigate = useNavigate();
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -27,7 +28,7 @@ const OrderOwn = () => {
         'B3uHEg9VYxDRxtTJq')
             .the((result) => {
                 console.log(result.text);
-                window.location('https://mern-task-app-sc80.onrender.com/artists');
+                navigate('https://mern-task-app-sc80.onrender.com/artists')
             }, (error) => {
                 console.log(error.text);
             });
