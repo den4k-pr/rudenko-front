@@ -30,7 +30,9 @@ function Header() {
   }, [dispatch]);
     
 
-   
+   const fromDb = null;
+
+const planes = fromDb || [];
    
     return(
         <header>
