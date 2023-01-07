@@ -1,4 +1,4 @@
-port React from "react";
+import React from "react";
 import AdminFiltersFilter from './AdminFiltersFilter';
 
 function FiltersPart(){
