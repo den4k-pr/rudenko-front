@@ -40,7 +40,7 @@ const BusketForm = () => {
                           <>
                             <input name="pr_title" value={" " + item.title + " "} type="hidden" placeholder="Write your Full name" required/>
                             <input name="pr_name" value={" " + item.name + " "} type="hidden" placeholder="Write your Full name" required/>
-                            <input name="pr_price" value={" " + item.price + " "} type="hidden" placeholder="Write your Full name" required/>
+                            <input name="pr_price" value={" " + item.price + "$" + " "} type="hidden" placeholder="Write your Full name" required/>
                           </>
                        )
                     }
