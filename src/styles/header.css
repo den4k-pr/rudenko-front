@@ -163,6 +163,11 @@
     display: flex;
     position: relative;
 }
+.search-list{
+    position: absolute;
+    left: 0;
+   
+}
 .busket{
     width: 20px;
     height: 17px;
