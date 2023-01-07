@@ -43,7 +43,7 @@ const OrderOwn = () => {
                  onSubmit={sendEmail} 
                  className="artist-form">
                      <div className="artist-form-box">
-                    <select name="user_category">
+                    <select name="user_category" required>
                         <option className="hide-option">Categories</option>
                         {
                             categories && categories.map(category => (
@@ -51,7 +51,7 @@ const OrderOwn = () => {
                             ))
                         }
                     </select>
-                    <select name="user_painter">
+                    <select name="user_painter" required>
                         <option className="hide-option">Artists</option>
                         {
                             painters && painters.map(painter => (
@@ -60,7 +60,6 @@ const OrderOwn = () => {
                         }
                     </select>
                     </div>
-                    <input name="jjj" value="dsvsvvvvvvvvvvvvvvvvv"/>
                     <input name="user_name" type="text" placeholder="Write your name" required/>
                     <input name="user_email" type="email" placeholder="Write your email" required/>
                     <input name="user_phone" type="phone" placeholder="Write your phone" required/>
