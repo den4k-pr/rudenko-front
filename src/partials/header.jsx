@@ -4,10 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import CartItem from '../partials/cartItem';
 import { clearItems } from '../store/cart/cartSlice';
 import { Link } from 'react-router-dom';
-import { getPlanes } from '../store/planes/planesSlice';
 
 function Header() {
-    const [value, setValue] = useState("");
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
 
@@ -23,12 +21,6 @@ function Header() {
         }
     }
     
-
-  const { products } = useSelector((state) => state.products);
-
-  useEffect(() => {
-    dispatch(getPlanes())
-  }, [dispatch]);
     
 
     return(
