@@ -142,7 +142,11 @@
     cursor: pointer;
     position: relative;
 }
-.search_body:hover input{
+.search_body:hover input,.search-list{
+    opacity: 1;
+    visibility: visible;
+}
+.search_body:hover .search-list{
     opacity: 1;
     visibility: visible;
 }
@@ -164,9 +168,14 @@
     position: relative;
 }
 .search-list{
+    background: #f4f4f4;
+    left: -135px;
+    top: 28px;
+    padding: 20px;
     position: absolute;
-    left: 0;
-   
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
 }
 .busket{
     width: 20px;
