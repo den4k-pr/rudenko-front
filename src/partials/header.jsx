@@ -58,7 +58,7 @@ function Header() {
                                     </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="search_body">
                                 <input type="text"/>
                                 <div className="search"></div>
                             </div>
