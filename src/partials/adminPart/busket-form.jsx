@@ -44,9 +44,6 @@ const BusketForm = () => {
                           </>
                        )
                     }
-                    <input name="client_fullName" type="text" placeholder="Write your Full name" required/>
-                    <input name="client_email" type="email" placeholder="Write your email" required/>
-                    <input name="client_phone" type="text" placeholder="Write your phone" required/>
                     <select className="states" name="client_state" id="">
                         <option className="hide-option">Choose State</option>
                         <option>Alabama</option>
@@ -100,6 +97,9 @@ const BusketForm = () => {
                         <option>Wisconsin</option>
                         <option>Wyoming</option>
                     </select>
+                    <input name="client_fullName" type="text" placeholder="Write your Full name" required/>
+                    <input name="client_email" type="email" placeholder="Write your email" required/>
+                    <input name="client_phone" type="text" placeholder="Write your phone" required/>
                     <input name="client_addresses" type="text" placeholder="Write your addresses" required/>
                     <input name="client_index" type="number" placeholder="Write your index" required/>
                     <textarea name="client_properties" type="text" placeholder="Write your properties" required></textarea>
