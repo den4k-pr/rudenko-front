@@ -139,6 +139,7 @@
     height: 17px;
     background-image: url(../images/search.png);
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 .busket{
     width: 20px;
