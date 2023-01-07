@@ -27,10 +27,9 @@ const AdminPainters = () => {
                 <div className="admin-fon"></div>
                 <div className="admin-body">
                     <div className="admin-sitebar">
-                    <Link to="/admin" className="admin-sitebar-link">Pictures</Link>
+                        <Link to="/admin" className="admin-sitebar-link">Pictures</Link>
                         <p className="admin-sitebar-link active">Painters</p>
-                        <p className="admin-sitebar-link">Posts</p>
-                        <p className="admin-sitebar-link">All info</p>
+                        <Link to="/admin/filter" className="admin-sitebar-link">Filter</Link>
                     </div>
                     <div className="admin-main">
                         <div className="admin-main-top">
