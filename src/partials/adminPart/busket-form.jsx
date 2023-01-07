@@ -1,66 +1,44 @@
-import React, {useState} from "react";
+import React from "react";
 import Header from "../header";
-// import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 
 const BusketForm = () => {
-    // const [buskTitle, setBuskTitle] = useState("");
-    // // const [buskTitle1, setBuskTitle1] = useState("");
-    // // const [buskTitle2, setBuskTitle2] = useState("");
-    // const [buskPrice, setBuskPrice] = useState("");
-    // const [buskPrice1, setBuskPrice1] = useState("");
-    // const [buskPrice2, setBuskPrice2] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState("");
-    const [loading, setLoading] = useState(false);
 
-    // const items = useSelector((state) => state.cart.items);
-
-    const submitBusket = async (e) => {
+    const sendCart = (e) => {
         e.preventDefault();
-        if (!phone || !email || !message) {
-            return toast.error('Please fill email, subject and message');
-        }
-        try {
-            setLoading(true);
-            const { dataBusket } = await axios.post(`https://rudenko-back.up.railway.app/api/busket`, {
-                email,
-                phone,
-                message,
+
+        emailjs.sendForm('service_uw0951x',
+        'template_2dqmqbj', form.current,
+        'B3uHEg9VYxDRxtTJq')
+            .then((result) => {
+                console.log(result.text);
+                navigate('/')
+            }, (error) => {
+                console.log(error.text);
             });
-            setLoading(false);
-            toast.success(dataBusket.message);
-          } catch (err) {
-            setLoading(false);
-            toast.error(
-              err.response && err.response.dataBusket.message
-                ? err.response.dataBusket.message
-                : err.message
-            );
-          }
-    }
+            e.target.reset()
+    };
 
     return(
         <>
             <Header />
             <div className="form-body">
                 <form
-                 onSubmit={submitBusket} 
+                 onSubmit={sendCart} 
                  className="artist-form">
                     <div className="artist-form-box">
                     </div>
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Write your email"/>
-                    <input onChange={(e) => setPhone(e.target.value)} type="text" placeholder="Write your phone"/>
-                    <textarea onChange={(e) => setMessage(e.target.value)} type="text" placeholder="Write your properties"></textarea>
-                    <button>
-                    {loading ? 'sending...' : 'make order'}
-                    </button>
+                    <input name="client_fullName" type="email" placeholder="Write your Full name" required/>
+                    <input name="client_email" type="email" placeholder="Write your email" required/>
+                    <input name="client_phone" type="text" placeholder="Write your phone" required/>
+                    <select name="client_state" id=""></select>
+                    <input name="client_addresses" type="text" placeholder="Write your addresses" required/>
+                    <input name="client_index" type="number" placeholder="Write your index" required/>
+                    <textarea name="client_properties" type="text" placeholder="Write your properties" required></textarea>
+                    <button>make order</button>
                 </form>
-                <ToastContainer />
                 <Link to="/" className="form-fon"></Link>
             </div>
         </>
