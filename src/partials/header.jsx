@@ -30,9 +30,6 @@ function Header() {
     dispatch(getPlanes())
   }, [dispatch]);
     
-    const filtered = products.filter(title => {
-        return title.name.toLowerCase().includes(value.toLowerCase())
-    })
 
     return(
         <header>
@@ -70,11 +67,6 @@ function Header() {
                                     </li>
                                 </ul>
                             </div>
-{
-    filtered.map(title => (
-        <p>{title.title}</p>
-    ))
-}
                             <div className="search_body">
                                 <input type="text" onChange={(event) => setValue(event.target.value)}/>
                                 <div className="search"></div>
