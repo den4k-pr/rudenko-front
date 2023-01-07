@@ -71,7 +71,7 @@ function Header() {
                                 </ul>
                             </div>
 {
-    products.map(title => (
+    filtered.map(title => (
         <p>{title.title}</p>
     ))
 }
