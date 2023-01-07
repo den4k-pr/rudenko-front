@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { getPlanes } from '../store/planes/planesSlice';
 
 function Header() {
-    const [searchTerm, setSearchTerm] = useState('');
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
 
@@ -68,7 +67,7 @@ function Header() {
                                 </ul>
                             </div>
                             <div className="search_body">
-                                <input type="text" onChange={(event) => setSearchTerm(event.target.value)}/>
+                                <input type="text"/>
                                 <div className="search"></div>
                             </div>
                             <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
