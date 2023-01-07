@@ -64,7 +64,7 @@ const OrderOwn = () => {
                     <input name="user_email" type="email" placeholder="Write your email" required/>
                     <input name="user_phone" type="phone" placeholder="Write your phone" required/>
                     <textarea name="user_message" type="text" placeholder="Write  your properties"></textarea>
-                    <Link to="/artists" type="submit">make order</Link>
+                    <button type="submit">make order</button>
                 </form>
                 <button className="form-fon"></button>
             </div>
