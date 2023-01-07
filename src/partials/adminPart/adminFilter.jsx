@@ -21,7 +21,7 @@ const AdminFilter = () => {
                 <div className="adminpict-box">
                     <h2 className="admin-title">Painters</h2>
                     <div className="admin-main-top-box">
-                        <Link to="/admin/CreatePainters" className="admin-main-top-box-create">Create product</Link>
+                        <Link to="/admin/filter" className="admin-sitebar-link">Filter</Link>
                     </div>
                 </div>
                 <div className="admin-fon"></div>
