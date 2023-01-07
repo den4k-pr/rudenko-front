@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 const BusketForm = () => {
     
     const form = useRef();
+    const items = useSelector((state) => state.cart.items);
 
     const navigate = useNavigate();
     const sendCart = (e) => {
@@ -33,11 +34,16 @@ const BusketForm = () => {
                  className="artist-form">
                     <div className="artist-form-box">
                     </div>
+                    {
+                       items.map(item => 
+                          <>
+                          <input name="client_fullName" value={item.name} type="text" placeholder="Write your Full name" required/>
+                          </>
+                       )
+                    }
                     <input name="client_fullName" type="text" placeholder="Write your Full name" required/>
                     <input name="client_email" type="email" placeholder="Write your email" required/>
-                    <input name="client_phone" type="text" value="0956700502" placeholder="Write your phone" required/>
-                    <input name="client_phone" type="text" value="0956700502" placeholder="Write your phone" required/>
-                    <input name="client_phone" type="text" value="0956700502" placeholder="Write your phone" required/>
+                    <input name="client_phone" type="text" placeholder="Write your phone" required/>
                     <select name="client_state" id=""></select>
                     <input name="client_addresses" type="text" placeholder="Write your addresses" required/>
                     <input name="client_index" type="number" placeholder="Write your index" required/>
