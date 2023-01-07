@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import CartItem from '../partials/cartItem';
 import { clearItems } from '../store/cart/cartSlice';
 import { Link } from 'react-router-dom';
+import { getPlanes } from '../store/planes/planesSlice';
 
 function Header() {
     const [burger, setBurger] = useState(false);
@@ -20,6 +21,12 @@ function Header() {
             dispatch(clearItems())
         }
     }
+    
+    const { planes } = useSelector((state) => state.planes);
+
+  useEffect(() => {
+    dispatch(getPlanes())
+  }, [dispatch]);
     
    
     return(
@@ -59,6 +66,13 @@ function Header() {
                                 </ul>
                             </div>
                             <div className="search_body">
+                                <div className="search-list">
+                                    {
+                                        planes.map(plane => {
+                                            <p>{plane.title}</p>
+                                        })
+                                    }    
+                                </div>
                                 <input type="text"/>
                                 <div className="search"></div>
                             </div>
