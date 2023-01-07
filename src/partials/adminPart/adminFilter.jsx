@@ -3,7 +3,7 @@ import '../../styles/admin.css';
 import { Link } from "react-router-dom";
 import {removeUser} from '../../store/slices/userSlice';
 import {useDispatch} from 'react-redux';
-import PaintersPart from "./Painters";
+import FilterPart from "./Filters";
 
 
 const AdminFilter = () => {
@@ -28,14 +28,14 @@ const AdminFilter = () => {
                 <div className="admin-body">
                     <div className="admin-sitebar">
                         <Link to="/admin" className="admin-sitebar-link">Pictures</Link>
-                        <p className="admin-sitebar-link active">Painters</p>
-                        <Link to="/admin/filter" className="admin-sitebar-link">Filter</Link>
+                        <Link to="/admin/painters" className="admin-sitebar-link">Painters</p>
+                        <p className="admin-sitebar-link active">Filter</p>
                     </div>
                     <div className="admin-main">
                         <div className="admin-main-top">
                         </div>
                         <div className="admin-main-content">
-                            <PaintersPart/>
+                            <FilterPart/>
                         </div>
                     </div>
                 </div>
