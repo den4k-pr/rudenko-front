@@ -1,7 +1,7 @@
 port React from "react";
 import AdminFiltersFilter from './AdminFiltersFilter';
 
-function PaintersPart(){
+function FiltersPart(){
     return(
         <>
         <div className="admin-main-content-box">
@@ -16,4 +16,4 @@ function PaintersPart(){
     )
 }
 
-export default PaintersPart;
+export default FiltersPart;
