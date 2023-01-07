@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Header from "../header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPainters } from "../../store/painters/paintersSlice";
 import { getCategories } from "../../store/categories/categoriesSlice";
@@ -16,8 +16,6 @@ const OrderOwn = () => {
       dispatch(getCategories());
     }, [dispatch]);
 
-    const useNavigate = ReactRouterDOM.useNavigate;
-    const navigate = useNavigate();
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -28,7 +26,7 @@ const OrderOwn = () => {
         'B3uHEg9VYxDRxtTJq')
             .the((result) => {
                 console.log(result.text);
-                navigate('https://mern-task-app-sc80.onrender.com/artists')
+                useNavigate('https://mern-task-app-sc80.onrender.com/artists')
             }, (error) => {
                 console.log(error.text);
             });
