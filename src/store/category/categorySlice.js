@@ -18,7 +18,7 @@ export const createCategory = createAsyncThunk('CREATE_CATEGORY', async (categor
 })
 
 const categorySlice = createSlice({
-    name: 'plane',
+    name: 'category',
     initialState: {
         plane: null,
         isError: false,
@@ -38,13 +38,13 @@ const categorySlice = createSlice({
             })
             .addCase(getCategory.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.plane = action.payload[0];
+                state.category = action.payload[0];
             })
             .addCase(getCategory.rejected, (state, action) => {
                 state.isError = true;
                 state.isLoading = false;
                 state.message = action.payload.message;
-                state.plane = null;
+                state.category = null;
             })
             .addCase(createCategory.pending, (state) => {
                 state.isLoading = true;
