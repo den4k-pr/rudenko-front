@@ -59,7 +59,7 @@ function Header() {
                                 </ul>
                             </div>
                             <div className="search_body">
-                                <input type="text" onChange={(event) => setValue(event.target.value)}/>
+                                <input type="text"/>
                                 <div className="search"></div>
                             </div>
                             <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
