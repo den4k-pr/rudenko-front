@@ -29,8 +29,8 @@ function Header() {
     dispatch(getPlanes())
   }, [dispatch]);
     
-   const filtered = planes.filter(plane => {
-        return plane.name.toLowerCase().icludes(value.toLowerCase())
+   const filtered = planes.filter(title => {
+        return title.name.toLowerCase().icludes(value.toLowerCase())
     })
    
    
@@ -73,8 +73,8 @@ function Header() {
                             <div className="search_body">
                                 <div className="search-list">
                                     {
-                                        filtered && filtered.map(plane => (
-                                            <p>{plane.title}</p>
+                                        filtered && filtered.map(title => (
+                                            <p>{title.title}</p>
                                         ))
                                     }    
                                 </div>
