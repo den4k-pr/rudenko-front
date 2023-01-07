@@ -8,6 +8,7 @@ import { store } from './store';
 import { Routes, Route } from "react-router-dom";
 import AdminOwnProduct from "./partials/adminPart/adminOwnProduct";
 import CreateProduct from './partials/adminPart/createProduct';
+import AdminFilter from './partials/adminPart/adminFilter';
 import AdminPainters from './partials/adminPart/adminPainters';
 import CreatePainters from './partials/adminPart/CreatePainters';
 import CreateCategory from './partials/adminPart/createCategory';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/CreateCategory" element={<CreateCategory/>}/>
           <Route path="/artists/modal" element={<OrderOwn/>}/>
           <Route path="/modal" element={<BusketForm/>}/>
+          <Route path="/admin/filter" element={<adminFilter/>}/>
         </Routes>
       </Provider>
     </>
