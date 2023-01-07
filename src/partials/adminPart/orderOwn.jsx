@@ -66,7 +66,7 @@ const OrderOwn = () => {
                     <textarea name="user_message" type="text" placeholder="Write  your properties"></textarea>
                     <Link to="/artists" type="submit">make order</Link>
                 </form>
-                <Link to="/artists" className="form-fon"></Link>
+                <button className="form-fon"></button>
             </div>
         </>
     )
