@@ -21,8 +21,7 @@ function Header() {
         }
     }
     
-    
-
+   
     return(
         <header>
             <div onClick={() => setBurger(false)} className={ burger === true ? "header__fon" : "header__fon hed-hide"}></div>
