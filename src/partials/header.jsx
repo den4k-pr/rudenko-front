@@ -68,19 +68,6 @@ function Header() {
                                 </ul>
                             </div>
                             <div className="search_body">
-//                                 <div className="search-list">
-//                                     {
-//                                         planes.filter((val)=> {
-//                                         if (searchTerm == "") {
-//                                             return val
-//                                         } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-//                                             return val
-//                                         }
-//                                     }).map(val => (
-//                                             <p>{val.title}</p>
-//                                         ))
-//                                     }    
-//                                 </div>
                                 <input type="text" onChange={(event) => setSearchTerm(event.target.value)}/>
                                 <div className="search"></div>
                             </div>
