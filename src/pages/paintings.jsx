@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPlanes } from '../store/planes/planesSlice';
 import { getCategories } from '../store/categories/categoriesSlice';
 import Footer from '../partials/footer';
-import Pr from './pr';
 
 const Paintings = () => {
     const [choseType, setChoseType] = useState()
