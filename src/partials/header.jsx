@@ -68,7 +68,7 @@ function Header() {
                             <div className="search_body">
                                 <div className="search-list">
                                     {
-                                        planes.map(plane => (
+                                        planes && planes.map(plane => (
                                             <p>{plane.title}</p>
                                         ))
                                     }    
