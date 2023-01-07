@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { useSelector } from 'react-redux';
 
 const BusketForm = () => {
+    const {totalPrice} = useSelector(state => state.cart);
     
     const form = useRef();
     const items = useSelector((state) => state.cart.items);
@@ -44,6 +45,7 @@ const BusketForm = () => {
                           </>
                        )
                     }
+                    <input type="hidden" value={totalPrice} name="totP"/>
                     <select className="states" name="client_state" id="">
                         <option className="hide-option">Choose State</option>
                         <option>Alabama</option>
