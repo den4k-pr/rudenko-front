@@ -19,9 +19,9 @@ export default function AdminPaintersPainters(){
         <>
         {
             categories && painters.map(category => (
-                <div key={painter._id} className="admin-main-content-product">
+                <div key={category._id} className="admin-main-content-product">
                     <div className="admin-main-content-product-box">
-                        <p className="admin-main-content-line-text">{painter.tab}</p>
+                        <p className="admin-main-content-line-text">{category.tab}</p>
                     </div>
                     <button onClick={() => deletePainter(painter._id)} id="removeBtn" className="admin-main-content-product-del" >
                     </button>
