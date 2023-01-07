@@ -63,7 +63,7 @@ const CreateProduct = () => {
                         />
                         <p className="admin-main-content-line-text">Name</p>
                         <select onChange={(e) => setName(e.target.value)} name="name" id="cars">
-                            <option type="hidden">Choose artist</option>
+                            <option className="hide-option">Choose artist</option>
                             {
                                 painters && painters.map(option => (
                                     <option onChange={(e) => setName(e.target.value)} value={option.name}>{option.name}</option>
@@ -71,7 +71,7 @@ const CreateProduct = () => {
                             }
                         </select>
                         <select onChange={(e) => setCategory(e.target.value)} name="category" id="cars">
-                            <option type="hidden">Choose category</option>
+                            <option className="hide-option">Choose category</option>
                             {
                                 categories && categories.map(cat => (
                                     <option onChange={(e) => setCategory(e.target.value)} value={cat.tab}>{cat.tab}</option>
