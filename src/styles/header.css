@@ -143,9 +143,17 @@
     position: relative;
 }
 .search input{
-    background: #000;
     position: absolute;
     left: -100px;
+    background: #fafafa;
+    left: -143px;
+    font-size: 14px;
+    padding: 5px;
+    top: -4px;
+    border-radius: 15px;
+    border: 1px solid #272727;
+    position: absolute;
+    z-index: 9;
 }
 .busket{
     width: 20px;
