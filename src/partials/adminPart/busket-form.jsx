@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../header";
-import { Link } from "react-router-dom";
-import 'react-toastify/dist/ReactToastify.css';
+import { Link, useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 const BusketForm = () => {
 
+    const navigate = useNavigate();
     const sendCart = (e) => {
         e.preventDefault();
 
@@ -26,6 +26,7 @@ const BusketForm = () => {
             <Header />
             <div className="form-body">
                 <form
+                 ref={form}
                  onSubmit={sendCart} 
                  className="artist-form">
                     <div className="artist-form-box">
