@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Header from "../header";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPainters } from "../../store/painters/paintersSlice";
 import { getCategories } from "../../store/categories/categoriesSlice";
@@ -26,7 +26,7 @@ const OrderOwn = () => {
         'B3uHEg9VYxDRxtTJq')
             .the((result) => {
                 console.log(result.text);
-                useNavigate('https://mern-task-app-sc80.onrender.com/artists')
+                window.location.href='https://mern-task-app-sc80.onrender.com/artists';
             }, (error) => {
                 console.log(error.text);
             });
