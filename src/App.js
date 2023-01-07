@@ -40,7 +40,7 @@ function App() {
           <Route path="/CreateCategory" element={<CreateCategory/>}/>
           <Route path="/artists/modal" element={<OrderOwn/>}/>
           <Route path="/modal" element={<BusketForm/>}/>
-          <Route path="/admin/filter" element={<adminFilter/>}/>
+          <Route path="/admin/filter" element={<AdminFilter/>}/>
         </Routes>
       </Provider>
     </>
