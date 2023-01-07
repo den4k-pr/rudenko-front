@@ -48,7 +48,7 @@ const BusketForm = () => {
                     <input name="client_email" type="email" placeholder="Write your email" required/>
                     <input name="client_phone" type="text" placeholder="Write your phone" required/>
                     <select className="states" name="client_state" id="">
-                        <option>Choose State</option>
+                        <option className="hide-option">Choose State</option>
                         <option>Alabama</option>
                         <option>Alaska</option>
                         <option>Arizona</option>
