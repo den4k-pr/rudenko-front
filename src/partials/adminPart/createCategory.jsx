@@ -1,9 +1,11 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { createCategory, resetCategoryErrors } from "../../store/category/categorySlice"
 
 const CreateCategory = () => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [ tab, setTab ] = useState("")
 
@@ -11,8 +13,12 @@ const CreateCategory = () => {
         const formData = new FormData();
         formData.append("tab", tab);
 
-    dispatch(createCategory(formData));
-    }, [tab])
+    dispatch(createCategory(formData)).then((res) => {
+      if (!res.error) {
+        navigate(`product/${res.payload._id}`, { replace: true });
+      }
+    });
+    }, [tab, dispatch, navigate])
 
     useEffect(() => () => dispatch(resetCategoryErrors()),[dispatch])
 
