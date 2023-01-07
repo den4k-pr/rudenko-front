@@ -141,7 +141,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
 }
-.search input{
+.search_body input{
     position: absolute;
     background: #fafafa;
     font-size: 14px;
