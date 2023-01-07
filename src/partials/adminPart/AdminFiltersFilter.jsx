@@ -18,12 +18,12 @@ export default function AdminPaintersPainters(){
     return(
         <>
         {
-            categories && painters.map(category => (
+            categories && categories.map(category => (
                 <div key={category._id} className="admin-main-content-product">
                     <div className="admin-main-content-product-box">
                         <p className="admin-main-content-line-text">{category.tab}</p>
                     </div>
-                    <button onClick={() => deletePainter(painter._id)} id="removeBtn" className="admin-main-content-product-del" >
+                    <button onClick={() => deleteCategory(category._id)} id="removeBtn" className="admin-main-content-product-del" >
                     </button>
                 </div>
             ))
