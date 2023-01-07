@@ -21,7 +21,7 @@ export default function Admin(){
                     <h2 className="admin-title">Pictures</h2>
                     <div className="admin-main-top-box">
                         <Link to="/admin/CreateProduct" className="admin-main-top-box-create">Create product</Link>
-                        <Link to="/CreateCategory" className="admin-main-top-box-filter">Filter</Link>
+                        
                     </div>
                 </div>
                 <div className="admin-fon"></div>
