@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 const BusketForm = () => {
+    
+    const form = useRef();
 
     const navigate = useNavigate();
     const sendCart = (e) => {
