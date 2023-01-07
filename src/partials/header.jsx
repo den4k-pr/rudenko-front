@@ -58,6 +58,7 @@ function Header() {
                                     </li>
                                 </ul>
                             </div>
+                            <div className="search"></div>
                             <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
                             <div onClick={() => setBurger(!burger)} id="burger" className={burger === !false ? "active" : "" }>
                                 <div className="burger-box">
