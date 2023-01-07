@@ -60,6 +60,7 @@ const OrderOwn = () => {
                         }
                     </select>
                     </div>
+
                     <input name="user_name" type="text" placeholder="Write your name" required/>
                     <input name="user_email" type="email" placeholder="Write your email" required/>
                     <input name="user_phone" type="phone" placeholder="Write your phone" required/>
