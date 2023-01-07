@@ -142,6 +142,10 @@
     cursor: pointer;
     position: relative;
 }
+.search:hover .search_body input{
+    opacity: 1;
+    visibility: visible;
+}
 .search_body input{
     position: absolute;
     background: #fafafa;
@@ -151,6 +155,9 @@
     border: 1px solid #272727;
     left: -145px;
     top: -4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
 }
 .search_body{
     display: flex;
