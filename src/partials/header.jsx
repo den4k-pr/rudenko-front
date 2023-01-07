@@ -54,14 +54,10 @@ function Header() {
                                         <Link to="/paintings" className="header-body-box-list_link">Paintings </Link>
                                     </li>
                                     <li>
-                                        <p className="header-body-box-list_link">Drawings</p>
-                                    </li>
-                                    <li>
                                         <Link to="/artists" className="header-body-box-list_link">Artists</Link>
                                     </li>
                                 </ul>
                             </div>
-                            <Link to="/admin" className="admin-ico"></Link>
                             <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
                             <div onClick={() => setBurger(!burger)} id="burger" className={burger === !false ? "active" : "" }>
                                 <div className="burger-box">
