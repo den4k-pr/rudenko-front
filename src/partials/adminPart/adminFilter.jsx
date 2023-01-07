@@ -6,7 +6,7 @@ import {useDispatch} from 'react-redux';
 import PaintersPart from "./Painters";
 
 
-const AdminPainters = () => {
+const AdminFilter = () => {
 
     const dispatch = useDispatch();
     return(
@@ -44,4 +44,4 @@ const AdminPainters = () => {
     )
 }
 
-export default AdminPainters;
+export default AdminFilter;
