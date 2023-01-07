@@ -30,7 +30,7 @@ function Header() {
   }, [dispatch]);
     
    const filtered = planes.filter(plane => {
-        return country.name.toLowerCase().icludes(value.toLowerCase())
+        return plane.name.toLowerCase().icludes(value.toLowerCase())
     })
    
    
