@@ -153,12 +153,14 @@
 .search-list{
     position: absolute;
     margin-bottom: -150px;
-    background-color: #fafafa;
     z-index: 99999;
     padding: 20px;
     border-radius: 20px;
     width: 200px;
     top: 120px;
+}
+.search-list{
+    background-color: #fff;
 }
 .button-search{
     font-size: 14px;
