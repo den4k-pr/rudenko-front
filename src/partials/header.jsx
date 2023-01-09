@@ -37,7 +37,7 @@ function Header() {
   const postQuery = searchParams.get('post') || '';
 
   useEffect(() => {
-    fetch('mongodb://localhost:27017/planes')
+    fetch('https://rudenko-back.up.railway.app/api/planes/')
         .then(res => res.json())
         .the(data => setPosts(data))
   })
