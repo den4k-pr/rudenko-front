@@ -90,7 +90,9 @@ function Header() {
                                     posts.filter(
                                         post => post.title.includes(postQuery)
                                     ).map(post => (
-                                        <p className="search-list-error">{post.title}</p>
+                                        <Link to={"/product/" + post._id} key={post._id}>
+                                            <p className="search-list-error">{post.title}</p>
+                                        </Link>
                                     ))
                                 }
                             </div>
