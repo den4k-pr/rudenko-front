@@ -3,12 +3,14 @@ import '../styles/header.css';
 import { useSelector, useDispatch } from 'react-redux';
 import CartItem from '../partials/cartItem';
 import { clearItems } from '../store/cart/cartSlice';
-import { Link } from 'react-router-dom';
-import { getPlanes } from '../store/planes/planesSlice';
+import { Link, useSearchParams } from 'react-router-dom';
 
 function Header() {
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
+    const [input, setInput] = useState(false);
+    const [posts, setPosts] = useState([]);
+    const [searchParams, setSearchParams] = useSearchParams('');
 
     const items = useSelector((state) => state.cart.items);
 
@@ -22,12 +24,23 @@ function Header() {
         }
     }
     
-    const { planes } = useSelector((state) => state.planes);
+    
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const query = form.search.value;
+
+    setSearchParams({post: query})
+  }
+
+  const postQuery = searchParams.get('post') || '';
 
   useEffect(() => {
-    dispatch(getPlanes())
-  }, [dispatch]);
-    
+    fetch('mongodb://localhost:27017/planes')
+        .then(res => res.json())
+        .the(data => setPosts(data))
+  })
 
    
     return(
@@ -66,10 +79,23 @@ function Header() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="search_body">
-                                <input type="text"/>
-                                <div className="search"></div>
+                            <form autoCapitalize='off' onSubmit={handleSubmit}>
+                            <div onClick={() => setInput(true)} className={input === false ? "search_body" : "search_body search_body-show"}>
+                                <input name="search" className={input === false ? "input-hide" : "input-show"} type="text"/>
+                                <input className={input === true ? "button-search" : "hide"} name="submit" type="submit" value="Search"/>
+                                <div className={input === false ? "search" : "hide"}></div>
                             </div>
+                            <div className={input === true ? "search-list" : "hide"}>
+                                {
+                                    posts.filter(
+                                        post => post.title.includes(postQuery)
+                                    ).map(post => (
+                                        <p className="search-list-error">{post.title}</p>
+                                    ))
+                                }
+                            </div>
+                            </form>
+                            <div onClick={() => setInput(false)} className={input === false ? "" : "search-fon"}></div>
                             <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
                             <div onClick={() => setBurger(!burger)} id="burger" className={burger === !false ? "active" : "" }>
                                 <div className="burger-box">
