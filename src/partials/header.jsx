@@ -39,7 +39,7 @@ function Header() {
   useEffect(() => {
     fetch('https://rudenko-back.up.railway.app/api/planes/')
         .then(res => res.json())
-        .the(data => setPosts(data))
+        .then(data => setPosts(data))
   })
 
    
