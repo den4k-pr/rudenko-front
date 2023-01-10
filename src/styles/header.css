@@ -156,7 +156,7 @@
     z-index: 99999;
     padding: 20px;
     border-radius: 20px;
-    width: 200px;
+    width: 240px;
     top: 120px;
 }
 .search-list{
@@ -191,6 +191,9 @@
     width: 200px;
     transition: .2s;
     margin-right: -25px;
+}
+#hide{
+    display: none;
 }
 .search_body:hover .input-hide{
     opacity: 1;
@@ -245,6 +248,14 @@
 }
 .burger-list-show{
     display: none;
+}
+.search-list-link{
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #161412;
+    line-height: 30px;
+    border-bottom: 1px solid #161412;
 }
 .length{
     margin-left: 14px;
@@ -326,5 +337,18 @@
     .active .burger-line-3{
         transform: rotate(45deg);
         
+    }
+}
+@media(max-width: 530px){
+    .button-search {
+        font-size: 10px;
+        background-color: #7b7b7b;
+        padding: 0 5px;
+        color: #fff;
+        border-radius: 0 15px 15px 0;
+        cursor: pointer;
+    }
+    .search-list{
+        width: 215px;
     }
 }
