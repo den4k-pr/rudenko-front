@@ -87,7 +87,7 @@ function Header() {
                             </div>
                             <form autoCapitalize='off' onSubmit={handleSubmit}>
                             <div onClick={() => setInput(true)} className={input === false ? "search_body" : "search_body search_body-show"}>
-                                <input name="search" className={input === false ? "input-hide" : "input-show"} type="text"/>
+                                <input autocomplete="off" name="search" className={input === false ? "input-hide" : "input-show"} type="text"/>
                                 <input className={input === true ? "button-search" : "hide"} name="submit" type="submit" value="Search"/>
                                 <div className={input === false ? "search" : "hide"}></div>
                             </div>
