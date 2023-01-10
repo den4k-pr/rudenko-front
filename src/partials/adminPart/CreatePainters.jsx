@@ -48,6 +48,7 @@ const CreatePainters = () => {
                             onChange={(e) => setDescription(e.target.value)}
                             className = "ownModal-content-input"
                         />
+                        <p className="admin-main-content-line-text">image</p>
                         <CreateInputs
                             name="image"
                             error={ errors && errors.name && errors.name.message }
