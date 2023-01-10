@@ -10,23 +10,7 @@ function Header() {
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
     const [input, setInput] = useState(false);
-    const [posts, setPosts] = useState([
-        {
-            title: "title"
-        },
-        {
-            title: "button"
-        },
-        {
-            title: "option"
-        },
-        {
-            title: "selector"
-        },
-        {
-            title: "index"
-        }
-    ]);
+    const [posts, setPosts] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams('');
 
     const items = useSelector((state) => state.cart.items);
@@ -58,11 +42,11 @@ function Header() {
 
   const postQuery = searchParams.get('post') || '';
 
-//   useEffect(() => {
-//     fetch('')
-//         .then(res => res.json())
-//         .the(data => setPosts(data))
-//   })
+  useEffect(() => {
+    fetch('https://rudenko-back.up.railway.app/api/planes/')
+        .then(res => res.json())
+        .then(data => setPosts(data))
+  })
 
    
     return(
