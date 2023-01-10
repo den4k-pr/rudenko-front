@@ -54,10 +54,6 @@ const ProductPart = ({ID, planeImage, title, name, category, materials, descript
                                     <div className="left-ico"></div>
                                     <p className="product-column-left-bottom-box-text">View in a room</p>
                                 </div>
-                                <div className="product-column-left-bottom-box">
-                                    <div className="right-ico"></div>
-                                    <p className="product-column-left-bottom-box-text">Share</p>
-                                </div>
                             </div>
                             </div>
                         </div>
