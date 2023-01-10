@@ -4,12 +4,29 @@ import { useSelector, useDispatch } from 'react-redux';
 import CartItem from '../partials/cartItem';
 import { clearItems } from '../store/cart/cartSlice';
 import { Link, useSearchParams } from 'react-router-dom';
+import { getPlanes } from '../store/planes/planesSlice';
 
 function Header() {
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
     const [input, setInput] = useState(false);
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([
+        {
+            title: "title"
+        },
+        {
+            title: "button"
+        },
+        {
+            title: "option"
+        },
+        {
+            title: "selector"
+        },
+        {
+            title: "index"
+        }
+    ]);
     const [searchParams, setSearchParams] = useSearchParams('');
 
     const items = useSelector((state) => state.cart.items);
@@ -24,6 +41,11 @@ function Header() {
         }
     }
     
+    const { planes } = useSelector((state) => state.planes);
+
+  useEffect(() => {
+    dispatch(getPlanes())
+  }, [dispatch]);
     
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,11 +58,11 @@ function Header() {
 
   const postQuery = searchParams.get('post') || '';
 
-  useEffect(() => {
-    fetch('https://rudenko-back.up.railway.app/api/planes/')
-        .then(res => res.json())
-        .then(data => setPosts(data))
-  })
+//   useEffect(() => {
+//     fetch('')
+//         .then(res => res.json())
+//         .the(data => setPosts(data))
+//   })
 
    
     return(
@@ -91,15 +113,15 @@ function Header() {
                                         post => post.title.includes(postQuery)
                                     ).map(post => (
                                         <Link to={"/product/" + post._id} key={post._id}>
-                                            <p className="search-list-error">{post.title}</p>
+                                            <p className="search-list-link">{post.title}</p>
                                         </Link>
                                     ))
                                 }
                             </div>
                             </form>
                             <div onClick={() => setInput(false)} className={input === false ? "" : "search-fon"}></div>
-                            <div onClick={() => setBascet(!bascet)} className="busket"><span className="length">{items.length}</span></div>
-                            <div onClick={() => setBurger(!burger)} id="burger" className={burger === !false ? "active" : "" }>
+                            <div onClick={() => setBascet(!bascet)} className={input === false ? "busket" : "hide"}><span className="length">{items.length}</span></div>
+                            <div onClick={() => setBurger(!burger)} id={input === false ? "burger" : "hide"} className={burger === !false ? "active" : "" }>
                                 <div className="burger-box">
                                     <div className="burger-line-1"></div>
                                     <div className="burger-line-2"></div>
