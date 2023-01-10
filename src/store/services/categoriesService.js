@@ -13,7 +13,7 @@ export const deleteCategories = async (id) => {
     return delCategories.data;
 }
 
-const createCategories = async (planeData) => {
+const createCategory = async (planeData) => {
     const categories = await axios.post(`https://rudenko-back.up.railway.app/api/categories`, planeData);
 
     return categories.data;
@@ -21,7 +21,7 @@ const createCategories = async (planeData) => {
 
 const categoriesServise = {
     getCategories,
-    createCategories,
+    createCategory,
     deleteCategories
 }
 
