@@ -19,7 +19,7 @@ const AdminFilter = () => {
             </div>
             <div className="container">
                 <div className="adminpict-box">
-                    <h2 className="admin-title">Painters</h2>
+                    <h2 className="admin-title">Filter</h2>
                     <div className="admin-main-top-box">
                         <Link to="/CreateCategory" className="admin-main-top-box-filter">Filter</Link>
                     </div>
