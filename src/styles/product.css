@@ -226,15 +226,16 @@
     margin: 0 20px;
 }
 .categories-link{
-    background-color: #d8d8d8;
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-size: 16px;
+    background: #161412;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 6px 12px;
+    text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
     transition: .1s;
-    border-top: 2px solid #272727;
-    border-right: 2px solid #272727;
 }
 .categories-link:hover{
     border-top: 0px solid #272727;
