@@ -363,8 +363,6 @@
     .product-column-left-content-sl{
         margin: 0 auto;
     }
-}
-@media(max-width: 480px){
     .categories-link-mob{
         display: block;
         position: relative;
@@ -398,6 +396,9 @@
     .categories.hide{
         display: none;
     }
+}
+@media(max-width: 480px){
+    
     .slick-dots {
         position: absolute;
         left: -50px;
