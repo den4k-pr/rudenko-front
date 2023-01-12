@@ -4,6 +4,7 @@ import { clearItems } from '../store/cart/cartSlice';
 
 const CartItem = ({id, title, price, planeImage}) => {
 
+    const dispatch = useDispatch();
     const onClickClear = () => {
         if (window.confirm('Clear buscket?')){
             dispatch(clearItems())
