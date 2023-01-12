@@ -7,6 +7,7 @@ import { getCategories } from '../store/categories/categoriesSlice';
 import Footer from '../partials/footer';
 
 const Paintings = () => {
+    const [openCategories, setOpenCategories] = useState(false)
     const [choseType, setChoseType] = useState()
     const [choseBoolean, setChoseBoolean] = useState(true)
 
@@ -27,13 +28,14 @@ const Paintings = () => {
                     <h1 className="main_title">Paintings</h1>
                 </div>
                 <div className="container">
-                    <div className="categories">
-                    <p onClick={() => setChoseBoolean(true)} className="categories-link">All</p>
-                        {
-                            categories && categories.map(category => (
-                                <p onClick={() => setChoseType(category.tab, setChoseBoolean(false))} className="categories-link">{category.tab}</p>
-                            ))
-                        }
+                    <p onClick={() => setOpenCategories(!openCategories)} className="categories-link categories-link-mob">Choose category</p>
+                    <div className={openCategories === true ? "categories" : "categories hide"}>
+                        <p onClick={() => setChoseBoolean(true)} className="categories-link">All</p>
+                            {
+                                categories && categories.map(category => (
+                                    <p onClick={() => setChoseType(category.tab, setChoseBoolean(false))} className="categories-link">{category.tab}</p>
+                                ))
+                            }
                     </div>
                     <div className="testBlok">
                     {

@@ -163,7 +163,7 @@
 }
 @media(max-width: 480px){
     .categories-link {
-        margin: 5px;
+        margin: 1px;
     }
     .categories{
         flex-direction: column;

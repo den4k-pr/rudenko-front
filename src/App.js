@@ -14,6 +14,7 @@ import CreatePainters from './partials/adminPart/CreatePainters';
 import CreateCategory from './partials/adminPart/createCategory';
 import OrderOwn from './partials/adminPart/orderOwn';
 import Paintings from './pages/paintings';
+import Call from './pages/call';
 import BusketForm from './partials/adminPart/busket-form';
 import Room from './pages/room';
 import './styles/main.css';
@@ -41,6 +42,7 @@ function App() {
           <Route path="/artists/modal" element={<OrderOwn/>}/>
           <Route path="/modal" element={<BusketForm/>}/>
           <Route path="/admin/filter" element={<AdminFilter/>}/>
+          <Route path="/call" element={<Call/>}/>
         </Routes>
       </Provider>
     </>

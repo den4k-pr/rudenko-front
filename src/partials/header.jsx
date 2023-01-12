@@ -83,6 +83,9 @@ function Header() {
                                     <li>
                                         <Link to="/artists" className="header-body-box-list_link">Artists</Link>
                                     </li>
+                                    <li>
+                                        <Link to="/call" className="header-body-box-list_link">call out for artists</Link>
+                                    </li>
                                 </ul>
                             </div>
                             <form autoCapitalize='off' onSubmit={handleSubmit}>

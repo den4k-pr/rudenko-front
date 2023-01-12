@@ -43,9 +43,11 @@
 }
 #header-body-box-list{
     display: flex;
-    justify-content: space-between;
-    width: 190px;
-    margin-right: 33px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 400px;
+    padding: 0 20px;
+    text-align: center;
 }
 .header-body-box-list_link{
     font-weight: 400;
@@ -54,6 +56,7 @@
     letter-spacing: 0.875px;
     text-transform: uppercase;
     color: #161412;
+    padding: 0 10px;
 }
 .crear__buscet{
     color: #7b7b7b;
@@ -237,6 +240,13 @@
     background-image: url(../images/busket.png);
     background-repeat: no-repeat;
 }
+.call_title{
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+#call-m{
+    height: 300px;
+}
 .header-body_logo{
     margin-right: auto;
     font-weight: 400;
@@ -265,6 +275,14 @@
     color: #a20000;
 }
 @media(max-width: 800px){
+    #header-body-box-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 480px;
+        padding: 0 20px;
+        text-align: center;
+    }
     .burger-list-hide{
         position: fixed;
         top: 0;
