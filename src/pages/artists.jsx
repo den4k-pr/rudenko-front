@@ -27,7 +27,7 @@ const Artists = () => {
                                     <img src={obj.image} alt="" />
                                     <div className="artist-button-box">
                                         <Link to="/artists/modal" key={obj._id} className="we__works">to order</Link>
-                                        <button className="we__works2">all works</button>
+                                        <Link to="/paintings" className="we__works2">all works</Link>
                                     </div>
                                 </div>
                                 <div className="artist-info">
