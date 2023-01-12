@@ -1,14 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { clearItems } from '../store/cart/cartSlice';
+import { removeItem } from "../store/cart/cartSlice";
 
 const CartItem = ({id, title, price, planeImage}) => {
 
     const dispatch = useDispatch();
     const onClickClear = () => {
-        if (window.confirm('Clear buscket?')){
-            dispatch(clearItems())
-        }
+        dispatch(removeItem())
     }
     
     console.log(id)
