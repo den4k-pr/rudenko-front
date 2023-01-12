@@ -160,8 +160,6 @@
     .main .slick-next{
         transform: scale(0.8);
     }
-}
-@media(max-width: 480px){
     .categories-link {
         margin: 1px;
     }
@@ -169,6 +167,8 @@
         flex-direction: column;
         text-align: center;
     }
+}
+@media(max-width: 480px){
     .testBlok{
         justify-content: center;
     }
