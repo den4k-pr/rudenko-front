@@ -228,6 +228,9 @@
 .categories-painters p{
     margin: 0 20px;
 }
+.categories .categories-link:hover{
+    border: 4px solid rgb(164, 164, 164);
+}
 .categories-link{
     background: #161412;
     border-radius: 2px;
@@ -239,12 +242,7 @@
     text-align: center;
     text-transform: uppercase;
     transition: .1s;
-}
-.categories-link:hover{
-    border-top: 0px solid #272727;
-    border-right: 0px solid #272727;
-    background-color: #e2e2e2;
-    color: #65635F;
+    cursor: pointer;
 }
 .categories.hide{
     display: flex;
@@ -363,6 +361,8 @@
     .product-column-left-content-sl{
         margin: 0 auto;
     }
+}
+@media(max-width: 480px){
     .categories-link-mob{
         display: block;
         position: relative;
@@ -396,9 +396,6 @@
     .categories.hide{
         display: none;
     }
-}
-@media(max-width: 480px){
-    
     .slick-dots {
         position: absolute;
         left: -50px;
