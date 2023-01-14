@@ -231,7 +231,10 @@
 .categories .categories-link:hover{
     border-top: 0px solid rgb(164, 164, 164);
     border-right: 0px solid rgb(164, 164, 164);
+    height: 33px;
+    margin: 0 2px;
 }
+
 .categories-link{
     border-top: 4px solid rgb(164, 164, 164);
     border-right: 4px solid rgb(164, 164, 164);
@@ -300,7 +303,9 @@
     }
     .categories-link{
         margin: 20px;
-
+    }
+    .categories .categories-link:hover{
+        margin: 20px 22px;
     }
     .product-column-left-slider-img {
         max-width: 330px;
@@ -311,13 +316,16 @@
     }
 }
 @media(max-width: 800px){
+    .categories .categories-link{
+        margin: 2px 0;
+    }
+    .categories .categories-link:hover{
+        margin: 2px 0;
+        height: 100%;
+    }
     .categories .categories-link:hover{
         border: 4px solid rgb(164, 164, 164);
         border: 4px solid rgb(164, 164, 164);
-    }
-    .categories .categories-link{
-        border: 0px solid rgb(164, 164, 164);
-        border: 0px solid rgb(164, 164, 164);
     }
     .product-columns{
         max-width: 800px;
