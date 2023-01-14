@@ -315,6 +315,10 @@
         border: 4px solid rgb(164, 164, 164);
         border: 4px solid rgb(164, 164, 164);
     }
+    .categories .categories-link{
+        border: 0px solid rgb(164, 164, 164);
+        border: 0px solid rgb(164, 164, 164);
+    }
     .product-columns{
         max-width: 800px;
         width: 100%;
