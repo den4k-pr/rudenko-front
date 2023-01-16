@@ -55,7 +55,7 @@ const CreatePainters = () => {
                             onChange={(e) => setImage(e.target.value)}
                         />
                         <button onClick={handleCreatePainter} className="ownChange">Create</button>
-                        <Link to="/painters" className="ownBack">Back</Link>
+                        <Link to="/admin/painters" className="ownBack">Back</Link>
                     </form>
                 </div>
             </>
