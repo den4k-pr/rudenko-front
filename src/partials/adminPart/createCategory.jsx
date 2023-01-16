@@ -35,7 +35,7 @@ const CreateCategory = () => {
                             className = "ownModal-content-input"
                         />
                         <button onClick={handleCreateCategory} className="ownChange">Create</button>
-                        <Link to="/filter" className="ownBack">Back</Link>
+                        <Link to="/admin/filter" className="ownBack">Back</Link>
                     </form>
                 </div>
             </>
