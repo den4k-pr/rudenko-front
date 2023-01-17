@@ -44,6 +44,7 @@
 }
 .product-column-left-bottom{
     display: flex;
+    margin-top: 30px;
 }
 .product-column-left-bottom-box{
     display: flex;
