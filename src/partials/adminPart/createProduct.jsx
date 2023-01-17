@@ -113,29 +113,33 @@ const CreateProduct = () => {
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
+                        <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
                             name = "image-2"
                             onChange={(e) => setImage(e.target.value)}
-                            className = "ownModal-content-input-2"
+                            className = "ownModal-content-input"
                         />
+                        <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
                             name = "image-3"
                             onChange={(e) => setImage(e.target.value)}
-                            className = "ownModal-content-input-2"
+                            className = "ownModal-content-input"
                         />
+                        <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
                             name = "image-4"
                             onChange={(e) => setImage(e.target.value)}
-                            className = "ownModal-content-input-2"
+                            className = "ownModal-content-input"
                         />
+                        <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
                             name = "image-5"
                             onChange={(e) => setImage(e.target.value)}
-                            className = "ownModal-content-input-2"
+                            className = "ownModal-content-input"
                         />
                         <button onClick={handleCreatePlane} className="ownChange">Create</button>
                         <Link to="/admin" className="ownBack">Back</Link>
