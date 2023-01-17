@@ -18,10 +18,10 @@ const CreateProduct = () => {
     const [ description, setDescription ] = useState("")
     const [ price, setPrice ] = useState("")
     const [ image, setImage ] = useState("")
-    const [ image2, setImage2 ] = useState("")
-    const [ image3, setImage3 ] = useState("")
-    const [ image4, setImage4 ] = useState("")
-    const [ image5, setImage5 ] = useState("")
+    const [ image2, setImage2 ] = useState(".")
+    const [ image3, setImage3 ] = useState(".")
+    const [ image4, setImage4 ] = useState(".")
+    const [ image5, setImage5 ] = useState(".")
 
     const handleCreatePlane = useCallback(() => {
         const formData = new FormData();
