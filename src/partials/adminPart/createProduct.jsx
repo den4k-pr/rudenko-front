@@ -113,6 +113,30 @@ const CreateProduct = () => {
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
+                        <input
+                            type = "text"
+                            name = "image-2"
+                            onChange={(e) => setImage(e.target.value)}
+                            className = "ownModal-content-input-2"
+                        />
+                        <input
+                            type = "text"
+                            name = "image-3"
+                            onChange={(e) => setImage(e.target.value)}
+                            className = "ownModal-content-input-2"
+                        />
+                        <input
+                            type = "text"
+                            name = "image-4"
+                            onChange={(e) => setImage(e.target.value)}
+                            className = "ownModal-content-input-2"
+                        />
+                        <input
+                            type = "text"
+                            name = "image-5"
+                            onChange={(e) => setImage(e.target.value)}
+                            className = "ownModal-content-input-2"
+                        />
                         <button onClick={handleCreatePlane} className="ownChange">Create</button>
                         <Link to="/admin" className="ownBack">Back</Link>
                     </form>
