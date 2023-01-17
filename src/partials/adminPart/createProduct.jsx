@@ -114,35 +114,35 @@ const CreateProduct = () => {
                             onChange={(e) => setPrice(e.target.value)}
                             className = "ownModal-content-input"
                         />
-                        <p className="admin-main-content-line-text">Image</p>
+                        <p className="admin-main-content-line-text">Image main</p>
                         <input
                             type = "text"
                             name = "image"
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
-                        <p className="admin-main-content-line-text">Image dop</p>
+                        <p className="admin-main-content-line-text">Image gallery</p>
                         <input
                             type = "text"
                             name = "image2"
                             onChange={(e) => setImage2(e.target.value)}
                             className = "ownModal-content-input"
                         />
-                        <p className="admin-main-content-line-text">Image dop</p>
+                        <p className="admin-main-content-line-text">Image gallery</p>
                         <input
                             type = "text"
                             name = "image3"
                             onChange={(e) => setImage3(e.target.value)}
                             className = "ownModal-content-input"
                         />
-                        <p className="admin-main-content-line-text">Image dop</p>
+                        <p className="admin-main-content-line-text">Image gallery</p>
                         <input
                             type = "text"
                             name = "image4"
                             onChange={(e) => setImage4(e.target.value)}
                             className = "ownModal-content-input"
                         />
-                        <p className="admin-main-content-line-text">Image dop</p>
+                        <p className="admin-main-content-line-text">Image gallery</p>
                         <input
                             type = "text"
                             name = "image5"
