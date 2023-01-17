@@ -58,6 +58,7 @@ const CreateProduct = () => {
                         <input
                             type = "text"
                             name = "title"
+                            defaultValue="title" 
                             onChange={(e) => setTitle(e.target.value)}
                             className = "ownModal-content-input"
                         />
