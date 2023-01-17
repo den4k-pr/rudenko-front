@@ -18,10 +18,10 @@ const CreateProduct = () => {
     const [ description, setDescription ] = useState("")
     const [ price, setPrice ] = useState("")
     const [ image, setImage ] = useState("")
-    const [ image_2, setImage_2 ] = useState("")
-    const [ image_3, setImage_3 ] = useState("")
-    const [ image_4, setImage_4 ] = useState("")
-    const [ image_5, setImage_5 ] = useState("")
+    const [ image2, setImage2 ] = useState("")
+    const [ image3, setImage3 ] = useState("")
+    const [ image4, setImage4 ] = useState("")
+    const [ image5, setImage5 ] = useState("")
 
     const handleCreatePlane = useCallback(() => {
         const formData = new FormData();
@@ -33,17 +33,17 @@ const CreateProduct = () => {
         formData.append("description", description);
         formData.append("price", price);
         formData.append("image", image);
-        formData.append("image_2", image_2);
-        formData.append("image_3", image_3);
-        formData.append("image_4", image_4);
-        formData.append("image_5", image_5);
+        formData.append("image2", image2);
+        formData.append("image3", image3);
+        formData.append("image4", image4);
+        formData.append("image5", image5);
 
         dispatch(createPlane(formData)).then((res) => {
             if (!res.error) {
               navigate(`product/${res.payload._id}`, { replace: true });
             }
           });
-    }, [title, name, category, materials, dispatch, navigate, size, description, price, image])
+    }, [title, name, category, materials, dispatch, navigate, size, description, price, image, image2, image3, image4, image5])
 
     useEffect(() => () => dispatch(resetPlaneErrors()),[dispatch])
 
@@ -124,29 +124,29 @@ const CreateProduct = () => {
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image_2"
-                            onChange={(e) => setImage_2(e.target.value)}
+                            name = "image2"
+                            onChange={(e) => setImage2(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image_3"
-                            onChange={(e) => setImage_3(e.target.value)}
+                            name = "image3"
+                            onChange={(e) => setImage3(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image_4"
-                            onChange={(e) => setImage_4(e.target.value)}
+                            name = "image4"
+                            onChange={(e) => setImage4(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image_5"
-                            onChange={(e) => setImage_5(e.target.value)}
+                            name = "image5"
+                            onChange={(e) => setImage5(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <button onClick={handleCreatePlane} className="ownChange">Create</button>
