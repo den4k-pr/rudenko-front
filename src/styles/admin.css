@@ -179,15 +179,14 @@
     overflow-y: scroll;
 }
 .ownModal-content{
-    max-width: 600px;
-    width: 100%;
     background-color: #f7f7f7;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    height: 1260px;
-    padding-top: 100px;
-    border-radius: 5px;
+    height: 1560px;
+    max-width: 600px;
+    padding: 450px 20px 20px;
+    width: 100%;
 }
 .ownModal-content-input{
     margin: 10px 0 20px 0;
