@@ -116,28 +116,28 @@ const CreateProduct = () => {
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image-2"
+                            name = "image_2"
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image-3"
+                            name = "image_3"
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image-4"
+                            name = "image_4"
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
-                            name = "image-5"
+                            name = "image_5"
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
