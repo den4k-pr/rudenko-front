@@ -18,6 +18,10 @@ const CreateProduct = () => {
     const [ description, setDescription ] = useState("")
     const [ price, setPrice ] = useState("")
     const [ image, setImage ] = useState("")
+    const [ image_2, setImage_2 ] = useState("")
+    const [ image_3, setImage_3 ] = useState("")
+    const [ image_4, setImage_4 ] = useState("")
+    const [ image_5, setImage_5 ] = useState("")
 
     const handleCreatePlane = useCallback(() => {
         const formData = new FormData();
@@ -29,6 +33,10 @@ const CreateProduct = () => {
         formData.append("description", description);
         formData.append("price", price);
         formData.append("image", image);
+        formData.append("image_2", image_2);
+        formData.append("image_3", image_3);
+        formData.append("image_4", image_4);
+        formData.append("image_5", image_5);
 
         dispatch(createPlane(formData)).then((res) => {
             if (!res.error) {
@@ -117,28 +125,28 @@ const CreateProduct = () => {
                         <input
                             type = "text"
                             name = "image_2"
-                            onChange={(e) => setImage(e.target.value)}
+                            onChange={(e) => setImage_2(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
                             name = "image_3"
-                            onChange={(e) => setImage(e.target.value)}
+                            onChange={(e) => setImage_3(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
                             name = "image_4"
-                            onChange={(e) => setImage(e.target.value)}
+                            onChange={(e) => setImage_4(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image dop</p>
                         <input
                             type = "text"
                             name = "image_5"
-                            onChange={(e) => setImage(e.target.value)}
+                            onChange={(e) => setImage_5(e.target.value)}
                             className = "ownModal-content-input"
                         />
                         <button onClick={handleCreatePlane} className="ownChange">Create</button>
