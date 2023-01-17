@@ -59,7 +59,7 @@ const CreateProduct = () => {
                             type = "text"
                             name = "title"
                             defaultValue="title" 
-                            onChange={(e) => setTitle(e.target.value)}
+                            onChange={(e) => setTitle(e.value)}
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Name</p>
