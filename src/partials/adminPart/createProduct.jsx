@@ -118,6 +118,7 @@ const CreateProduct = () => {
                         <input
                             type = "text"
                             name = "image"
+                            placeholder="Головна картинка"
                             onChange={(e) => setImage(e.target.value)}
                             className = "ownModal-content-input"
                         />
@@ -126,6 +127,7 @@ const CreateProduct = () => {
                             type = "text"
                             name = "image2"
                             onChange={(e) => setImage2(e.target.value)}
+                            placeholder="Вкажи любий текст або силку на картинку (поле повино бути заповненийм обовязково)"
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image gallery</p>
@@ -133,6 +135,7 @@ const CreateProduct = () => {
                             type = "text"
                             name = "image3"
                             onChange={(e) => setImage3(e.target.value)}
+                            placeholder="Вкажи любий текст або силку на картинку (поле повино бути заповненийм обовязково)"
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image gallery</p>
@@ -140,12 +143,14 @@ const CreateProduct = () => {
                             type = "text"
                             name = "image4"
                             onChange={(e) => setImage4(e.target.value)}
+                            placeholder="Вкажи любий текст або силку на картинку (поле повино бути заповненийм обовязково)"
                             className = "ownModal-content-input"
                         />
                         <p className="admin-main-content-line-text">Image gallery</p>
                         <input
                             type = "text"
                             name = "image5"
+                            placeholder="Вкажи любий текст або силку на картинку (поле повино бути заповненийм обовязково)"
                             onChange={(e) => setImage5(e.target.value)}
                             className = "ownModal-content-input"
                         />
