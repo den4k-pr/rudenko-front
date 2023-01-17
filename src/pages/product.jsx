@@ -17,7 +17,7 @@ const Product = ({ addItem  }) => {
     return(
         plane && (
             <>
-                <ProductPart ID={plane.id} planeImage={plane.image} title={plane.title} name={plane.name} category={plane.category} materials={plane.materials} description={plane.description} size={plane.size} price={plane.price}/>
+                <ProductPart image_gal_2={plane.image2} image_gal_3={plane.image3} image_gal_4={plane.image4} image_gal_5={plane.image5} ID={plane.id} planeImage={plane.image} title={plane.title} name={plane.name} category={plane.category} materials={plane.materials} description={plane.description} size={plane.size} price={plane.price}/>
             </>
         )
     )
