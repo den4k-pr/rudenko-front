@@ -241,12 +241,6 @@
 .categories-painters p{
     margin: 0 20px;
 }
-.categories .categories-link:hover{
-    border-top: 0px solid rgb(164, 164, 164);
-    border-right: 0px solid rgb(164, 164, 164);
-    height: 33px;
-
-}
 
 .categories-link{
     background: #161412;
