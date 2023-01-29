@@ -260,6 +260,10 @@
     justify-content: space-between;
     padding: 0 100px 30px 100px;
 }
+    .categories .categories-link:hover{
+        background: gray;
+        color: #000
+    }
 @media(max-width: 1300px){
     .product-column-right-content {
         left: 50px;
@@ -313,9 +317,6 @@
     }
     .categories-link{
         margin: 20px;
-    }
-    .categories .categories-link:hover{
-        margin: 20px 22px;
     }
     .product-column-left-slider-img {
         max-width: 330px;
