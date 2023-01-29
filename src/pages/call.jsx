@@ -34,7 +34,7 @@ const Call = () => {
                     <h3 className="call_title">Send your CV for further cooperation</h3>
                     <input placeholder="Write  your email" type="email" name="call_email" required/>
                     <textarea id="call-m" name="call_message" type="text" placeholder="Write  your properties" required></textarea>
-                    <button type="submit">make order</button>
+                    <button type="submit">send</button>
                 </form>
                 <Link to="/artists" className="form-fon"></Link>
             </div>
