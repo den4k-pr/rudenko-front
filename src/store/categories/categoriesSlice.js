@@ -15,7 +15,6 @@ const categoriesSlice = createSlice({
         categories: null,
         isError: false,
         isLoading: false,
-        message: ''
     },
     extraReducers: (builder) => {
         builder.addCase(getCategories.pending, (state) => {
@@ -28,7 +27,6 @@ const categoriesSlice = createSlice({
         builder.addCase(getCategories.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
-            state.message = action.payload.message;
             state.categories = null;
         });
     }
