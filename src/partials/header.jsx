@@ -10,7 +10,6 @@ function Header() {
     const [burger, setBurger] = useState(false);
     const [bascet, setBascet] = useState(false);
     const [input, setInput] = useState(false);
-    const [posts, setPosts] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams('');
 
     const items = useSelector((state) => state.cart.items);
@@ -42,11 +41,6 @@ function Header() {
 
   const postQuery = searchParams.get('post') || '';
 
-  useEffect(() => {
-    fetch('https://rudenko-back-production.up.railway.app/api/planes/')
-        .then(res => res.json())
-        .then(data => setPosts(data))
-  })
 
    
     return(
@@ -95,15 +89,6 @@ function Header() {
                                 <div className={input === false ? "search" : "hide"}></div>
                             </div>
                             <div className={input === true ? "search-list" : "hide"}>
-                                {
-                                    posts.filter(
-                                        post => post.title.includes(postQuery)
-                                    ).map(post => (
-                                        <Link to={"/product/" + post._id} key={post._id}>
-                                            <p className="search-list-link">{post.title}</p>
-                                        </Link>
-                                    ))
-                                }
                             </div>
                             </form>
                             <div onClick={() => setInput(false)} className={input === false ? "" : "search-fon"}></div>
