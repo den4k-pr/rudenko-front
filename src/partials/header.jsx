@@ -43,7 +43,7 @@ function Header() {
   const postQuery = searchParams.get('post') || '';
 
   useEffect(() => {
-    fetch('https://backend-production-9fa0.up.railway.app/api/planes/')
+    fetch('https://rudenko-back-production.up.railway.app/api/planes/')
         .then(res => res.json())
         .then(data => setPosts(data))
   })
