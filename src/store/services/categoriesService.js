@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getCategories = async () => {
-    const categories = await axios.get('https://rudenko-back-production.up.railway.app/api/categories/');
+    const categories = await axios.get('https://rudenko-back-production.up.railway.app/api/categories');
 
     return categories.data;
 }
