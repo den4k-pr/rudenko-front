@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://rudenko-art-pro.onrender.com",
   "proxy": "https://rudenko-art-pro.onrender.com",
+  
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@reduxjs/toolkit": "^1.9.1",
